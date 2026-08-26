@@ -18,57 +18,6 @@
             overflow-x: hidden;
         }
 
-        .market-ticker {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 0.8rem 0;
-            overflow: hidden;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1001;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .ticker-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            padding: 0 2rem;
-        }
-
-        .ticker-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .ticker-label {
-            opacity: 0.9;
-        }
-
-        .ticker-value {
-            font-weight: bold;
-            font-size: 1rem;
-        }
-
-        .ticker-change {
-            font-size: 0.85rem;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-        }
-
-        .ticker-up {
-            background: rgba(34, 197, 94, 0.3);
-            color: #22c55e;
-        }
-
-        .ticker-down {
-            background: rgba(239, 68, 68, 0.3);
             color: #ef4444;
         }
 
@@ -857,29 +806,6 @@
     </style>
 </head>
 <body>
-    <div class="market-ticker">
-        <div class="ticker-container" id="marketTicker">
-            <div class="ticker-item">
-                <span class="ticker-label">NIFTY 50:</span>
-                <span class="ticker-value" id="nifty">Loading...</span>
-                <span class="ticker-change" id="niftyChange"></span>
-            </div>
-            <div class="ticker-item">
-                <span class="ticker-label">SENSEX:</span>
-                <span class="ticker-value" id="sensex">Loading...</span>
-                <span class="ticker-change" id="sensexChange"></span>
-            </div>
-            <div class="ticker-item">
-                <span class="ticker-label">GOLD:</span>
-                <span class="ticker-value" id="gold">Loading...</span>
-                <span class="ticker-change" id="goldChange"></span>
-            </div>
-            <div class="ticker-item">
-                <span class="ticker-label">SILVER:</span>
-                <span class="ticker-value" id="silver">Loading...</span>
-                <span class="ticker-change" id="silverChange"></span>
-            </div>
-        </div>
     </div>
 
     <header class="header">
