@@ -74,12 +74,34 @@
     }
 
     .header {
+        .top-brand-bar {
+    background: #ffffff;
+    color: #1e3a8a;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1001;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.top-brand-separator {
+    color: #3b82f6;
+    font-size: 15px;
+}
         background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
         color: white;
         padding: 1rem 0;
         position: fixed;
         width: 100%;
-        top: 45px;
+        top: 38px;
         z-index: 1000;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
