@@ -3,8 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Investment Calculators | Finvestro – SIP, Lumpsum, SWP &amp; Term Cover</title>
-<meta name="description" content="Free SIP, Lumpsum, SWP and Term Insurance calculators by Finvestro, Alwar. Plan your goals and talk to an expert on WhatsApp.">
+<title>SIP Calculator – Free Online SIP Returns Calculator | Finvestro, Alwar</title>
+<meta name="description" content="Free SIP calculator to estimate your mutual fund returns. Also Lumpsum, SWP, STP, Goal SIP, Step-up SIP and Term Cover calculators by Finvestro, Alwar (ARN-318624).">
+<link rel="canonical" href="https://finvestro.com/calculators.html">
+<link rel="icon" href="Finvestro_Logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SIP Calculator – Free Online SIP Returns Calculator | Finvestro">
+<meta property="og:description" content="Estimate your SIP, lumpsum, SWP and STP returns for free. By Finvestro, Alwar.">
+<meta property="og:url" content="https://finvestro.com/calculators.html">
+<meta property="og:image" content="https://finvestro.com/Finvestro_Logo.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Finvestro SIP Calculator", "url": "https://finvestro.com/calculators.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "description": "Free SIP, Lumpsum, SWP, STP, Goal SIP, Step-up SIP and Term Cover calculators.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}, "publisher": {"@type": "Organization", "name": "Finvestro – The Investment Hub", "url": "https://finvestro.com/"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a SIP calculator?", "acceptedAnswer": {"@type": "Answer", "text": "A SIP calculator is a free online tool that estimates how much your monthly mutual fund SIP could grow to. You enter the monthly amount, the expected yearly return and the number of years, and it shows the invested amount, estimated returns and total value."}}, {"@type": "Question", "name": "How is SIP return calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The calculator uses the standard future value formula for a series of monthly investments: FV = P × [((1 + i)^n − 1) ÷ i] × (1 + i). Here P is the monthly SIP, i is the monthly rate of return and n is the number of months."}}, {"@type": "Question", "name": "Are SIP returns guaranteed?", "acceptedAnswer": {"@type": "Answer", "text": "No. Mutual fund investments are subject to market risks. The calculator assumes a constant return only to give an illustration. Actual returns can be higher or lower and are not guaranteed."}}, {"@type": "Question", "name": "What is the minimum amount to start a SIP?", "acceptedAnswer": {"@type": "Answer", "text": "Many mutual fund schemes allow a SIP to start from ₹500 per month, and some allow even less. The minimum depends on the scheme, so please check the scheme documents."}}, {"@type": "Question", "name": "What is the difference between SIP and lumpsum?", "acceptedAnswer": {"@type": "Answer", "text": "In a SIP you invest a fixed amount every month. In a lumpsum you invest one bigger amount at once. You can compare both with the SIP and Lumpsum calculators on this page."}}, {"@type": "Question", "name": "What are STP and SWP?", "acceptedAnswer": {"@type": "Answer", "text": "A Systematic Transfer Plan (STP) moves money from one scheme to another at regular intervals, for example from a debt fund to an equity fund. A Systematic Withdrawal Plan (SWP) gives you a regular payout from your investment."}}]}]}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;overflow-x:hidden;background:#f8f9fa}
@@ -52,6 +60,7 @@ dd{font-weight:700;text-align:right}
 .cta{margin-top:auto;display:block;text-align:center;background:#fff;color:#1e3a8a;text-decoration:none;font-weight:700;padding:14px 20px;border-radius:50px;transition:transform .3s,box-shadow .3s}
 .cta:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
 .disc{margin-top:28px;font-size:.85rem;color:#666;background:#fff;border-left:4px solid #3b82f6;border-radius:8px;padding:14px 18px}
+.info{margin-top:36px;background:#fff;border-radius:15px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,.08)}.info h2{color:#1e3a8a;font-size:1.6rem;margin-bottom:.7rem}.info h3{color:#1e3a8a;font-size:1.1rem;margin:1.1rem 0 .3rem}.info p{margin-bottom:.8rem;color:#444}.info a{color:#1e3a8a;font-weight:600}
 .footer{background:#1e3a8a;color:#fff;text-align:center;padding:2.5rem 2rem}
 .footer p{margin-bottom:.4rem;font-size:.95rem}
 .footer a{color:#fff;text-decoration:none}
@@ -85,8 +94,8 @@ dd{font-weight:700;text-align:right}
 </header>
 
 <section class="hero">
-<h1>Investment Calculators</h1>
-<p>Move the sliders and see what your money could grow into. Free to use, no sign-up needed.</p>
+<h1>SIP Calculator – Calculate Your Mutual Fund Returns</h1>
+<p>Free online SIP calculator by Finvestro, Alwar. Move the sliders to see your invested amount, estimated returns and total value. Also try Lumpsum, SWP, STP, Goal SIP, Step-up SIP and Term Cover calculators.</p>
 </section>
 
 <main class="wrap">
@@ -96,11 +105,30 @@ dd{font-weight:700;text-align:right}
 <section class="res" id="res" aria-live="polite" aria-label="Result"></section>
 </div>
 <p class="disc">Mutual fund investments are subject to market risks. Read all scheme related documents carefully. These calculators show illustrative figures based on a constant assumed return. Actual returns will vary and are not guaranteed. Past performance may or may not be sustained in future.</p>
+<section class="info">
+<h2>How does the SIP calculator work?</h2>
+<p>A SIP (Systematic Investment Plan) lets you invest a fixed amount in mutual funds every month. This SIP calculator estimates the future value of your investment using the formula <strong>FV = P × [((1 + i)<sup>n</sup> − 1) ÷ i] × (1 + i)</strong>, where P is your monthly SIP, i is the monthly rate and n is the number of months. The yearly return you enter is converted to an equivalent monthly rate.</p>
+<p><strong>Example:</strong> a SIP of ₹1,000 per month for 15 years at an assumed 12% a year means ₹1,80,000 invested, about ₹2,95,931 estimated returns and a total value of about ₹4,75,931. This is only an illustration and not a promise of returns.</p>
+<p>Want to start a SIP in Alwar? Read about our <a href="index.html#service-sip">SIP services</a> or <a href="index.html#contact">contact us</a> for a free consultation.</p>
+<h2>Frequently asked questions</h2>
+<h3>What is a SIP calculator?</h3>
+<p>A SIP calculator is a free online tool that estimates how much your monthly mutual fund SIP could grow to. You enter the monthly amount, the expected yearly return and the number of years, and it shows the invested amount, estimated returns and total value.</p>
+<h3>How is SIP return calculated?</h3>
+<p>The calculator uses the standard future value formula for a series of monthly investments: FV = P × [((1 + i)^n − 1) ÷ i] × (1 + i). Here P is the monthly SIP, i is the monthly rate of return and n is the number of months.</p>
+<h3>Are SIP returns guaranteed?</h3>
+<p>No. Mutual fund investments are subject to market risks. The calculator assumes a constant return only to give an illustration. Actual returns can be higher or lower and are not guaranteed.</p>
+<h3>What is the minimum amount to start a SIP?</h3>
+<p>Many mutual fund schemes allow a SIP to start from ₹500 per month, and some allow even less. The minimum depends on the scheme, so please check the scheme documents.</p>
+<h3>What is the difference between SIP and lumpsum?</h3>
+<p>In a SIP you invest a fixed amount every month. In a lumpsum you invest one bigger amount at once. You can compare both with the SIP and Lumpsum calculators on this page.</p>
+<h3>What are STP and SWP?</h3>
+<p>A Systematic Transfer Plan (STP) moves money from one scheme to another at regular intervals, for example from a debt fund to an equity fund. A Systematic Withdrawal Plan (SWP) gives you a regular payout from your investment.</p>
+</section>
 </main>
 
 <footer class="footer">
 <p><strong>Finvestro – The Investment Hub</strong></p>
-<p>ARN: 318624 | Authorized Mutual Fund Distributor</p>
+<p>ARN-318624 | Authorized Mutual Fund Distributor</p>
 <p>G7, Ground Floor, Wonder Mall, Alwar, Rajasthan</p>
 <p><a href="mailto:finvestro.com@gmail.com">finvestro.com@gmail.com</a> | Hitesh: <a href="tel:+919166646162">+91 9166646162</a> | Arun: <a href="tel:+918432846674">+91 8432846674</a></p>
 <p class="s">&copy; 2025 Finvestro. All rights reserved.</p>
@@ -112,16 +140,16 @@ function inr(n){return "₹"+Math.round(n).toLocaleString("en-IN")}
 function words(n){n=Math.round(n);if(n>=1e7)return (n/1e7).toFixed(2)+" Crore";if(n>=1e5)return (n/1e5).toFixed(2)+" Lakh";return ""}
 var CALCS=[
 {id:"sip",name:"SIP",desc:"Invest a fixed amount every month and see the power of compounding.",
- f:[{id:"a",label:"Monthly investment",min:500,max:200000,step:500,val:10000,pre:"₹"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"},
+ f:[{id:"a",label:"Monthly investment",min:500,max:500000,step:500,val:10000,pre:"₹"},
+    {id:"r",label:"Expected return (p.a.)",min:1,max:20,step:.5,val:10,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:50,step:1,val:10,suf:"yrs"},
     {id:"i",label:"Inflation (p.a.)",min:0,max:10,step:.5,val:6,suf:"%"}],
  calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,n=v.y*12,fv=i?v.a*((Math.pow(1+i,n)-1)/i)*(1+i):v.a*n,inv=v.a*n;
   return {label:"Estimated value",val:fv,split:[inv,fv-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(fv-inv)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes the SIP is paid at the start of each month. The yearly return is converted to an equivalent monthly rate."}}},
 {id:"lump",name:"Lumpsum",desc:"Invest one amount today and see its value after a few years.",
  f:[{id:"a",label:"Investment amount",min:5000,max:10000000,step:5000,val:500000,pre:"₹"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"},
+    {id:"r",label:"Expected return (p.a.)",min:1,max:20,step:.5,val:10,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:50,step:1,val:10,suf:"yrs"},
     {id:"i",label:"Inflation (p.a.)",min:0,max:10,step:.5,val:6,suf:"%"}],
  calc:function(v){var fv=v.a*Math.pow(1+v.r/100,v.y);
   return {label:"Estimated value",val:fv,split:[v.a,fv-v.a],rows:[["Amount invested",inr(v.a)],["Estimated gains",inr(fv-v.a)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes yearly compounding at a constant return."}}},
@@ -129,7 +157,7 @@ var CALCS=[
  f:[{id:"a",label:"Total investment",min:100000,max:50000000,step:100000,val:5000000,pre:"₹"},
     {id:"w",label:"Monthly withdrawal",min:1000,max:500000,step:1000,val:30000,pre:"₹"},
     {id:"r",label:"Expected return (p.a.)",min:1,max:20,step:.5,val:9,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:15,suf:"yrs"}],
+    {id:"y",label:"Time period",min:1,max:50,step:1,val:15,suf:"yrs"}],
  calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,b=v.a,m=v.y*12,ended=0;
   for(var k=1;k<=m;k++){b=b*(1+i)-v.w;if(b<=0){b=0;ended=k;break}}
   var months=ended||m,lasted=ended?Math.floor(ended/12)+" yrs "+(ended%12)+" months":"Full "+v.y+" years";
@@ -138,7 +166,7 @@ var CALCS=[
    note:ended?"At this withdrawal your investment runs out early. Try a lower withdrawal or a longer period.":"Withdrawals are made at the end of each month after returns are added."}}},
 {id:"term",name:"Term Cover",desc:"Find out how much life cover your family may need.",
  f:[{id:"e",label:"Yearly family expenses",min:100000,max:5000000,step:50000,val:600000,pre:"₹"},
-    {id:"y",label:"Years your family needs support",min:5,max:40,step:1,val:20,suf:"yrs"},
+    {id:"y",label:"Years your family needs support",min:5,max:50,step:1,val:20,suf:"yrs"},
     {id:"l",label:"Loans to repay",min:0,max:20000000,step:100000,val:2000000,pre:"₹"},
     {id:"g",label:"Future goals (education, marriage)",min:0,max:20000000,step:100000,val:2500000,pre:"₹"},
     {id:"s",label:"Existing investments and cover",min:0,max:30000000,step:100000,val:1500000,pre:"₹"}],
@@ -147,15 +175,15 @@ var CALCS=[
    note:"A simple estimate assuming 8% returns and 6% inflation. A proper needs analysis also looks at your age, income and health."}}},
 {id:"goal",name:"Goal SIP",desc:"Find the monthly SIP needed to reach a target amount.",
  f:[{id:"g",label:"Target amount",min:100000,max:100000000,step:100000,val:5000000,pre:"₹"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"}],
+    {id:"r",label:"Expected return (p.a.)",min:1,max:20,step:.5,val:10,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:50,step:1,val:10,suf:"yrs"}],
  calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,n=v.y*12,p=v.g*i/((Math.pow(1+i,n)-1)*(1+i)),inv=p*n;
   return {label:"Monthly SIP needed",val:p,split:[inv,v.g-inv],rows:[["Target amount",inr(v.g)],["Total invested",inr(inv)],["Estimated gains",inr(v.g-inv)]],note:"Assumes the SIP is paid at the start of each month. The yearly return is converted to an equivalent monthly rate."}}},
 {id:"step",name:"Step-up SIP",desc:"Increase your SIP every year as your income grows.",
- f:[{id:"a",label:"Starting monthly SIP",min:500,max:200000,step:500,val:10000,pre:"₹"},
+ f:[{id:"a",label:"Starting monthly SIP",min:500,max:500000,step:500,val:10000,pre:"₹"},
     {id:"s",label:"Yearly increase in SIP",min:0,max:25,step:1,val:10,suf:"%"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"}],
+    {id:"r",label:"Expected return (p.a.)",min:1,max:20,step:.5,val:10,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:50,step:1,val:10,suf:"yrs"}],
  calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,b=0,inv=0,p=v.a;
   for(var m=1;m<=v.y*12;m++){b=(b+p)*(1+i);inv+=p;if(m%12===0)p*=1+v.s/100}
   return {label:"Estimated value",val:b,split:[inv,b-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(b-inv)],["SIP amount in the last year",inr(p/(1+v.s/100))]],note:"The SIP amount goes up once a year. Returns are assumed constant."}}},
@@ -163,17 +191,20 @@ var CALCS=[
  f:[{id:"l",label:"Amount in debt fund",min:100000,max:50000000,step:100000,val:1200000,pre:"₹"},
     {id:"t",label:"Monthly transfer to equity fund",min:1000,max:1000000,step:1000,val:50000,pre:"₹"},
     {id:"d",label:"Debt fund return (p.a.)",min:1,max:10,step:.5,val:7,suf:"%"},
-    {id:"e",label:"Equity fund return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
+    {id:"e",label:"Equity fund return (p.a.)",min:1,max:20,step:.5,val:10,suf:"%"},
     {id:"y",label:"Time period",min:1,max:10,step:1,val:2,suf:"yrs"}],
  calc:function(v){var id=Math.pow(1+v.d/100,1/12)-1,ie=Math.pow(1+v.e/100,1/12)-1,D=v.l,E=0,n=v.y*12,k,x;
   for(k=1;k<=n;k++){D*=1+id;x=Math.min(v.t,D);D-=x;E=E*(1+ie)+x}
   var tot=D+E,debt=v.l*Math.pow(1+id,n);
   return {label:"Total value after "+v.y+" years",val:tot,split:[v.l,tot-v.l],rows:[["Equity fund value",inr(E)],["Debt fund balance",inr(D)],["If kept only in debt fund",inr(debt)]],note:"Transfers stop when the debt fund is empty. Tax, exit load and expenses are not included."}}}
 ];
+var ORDER=["sip","lump","swp","stp","goal","step","term"];
+CALCS.sort(function(a,b){return ORDER.indexOf(a.id)-ORDER.indexOf(b.id)});
 var cur=0,vals={};
+(function(){var h=location.hash.slice(1);CALCS.forEach(function(c,k){if(c.id===h)cur=k})})();
 CALCS.forEach(function(c){vals[c.id]={};c.f.forEach(function(f){vals[c.id][f.id]=f.val})});
 var tabsEl=document.getElementById("tabs"),inEl=document.getElementById("inputs"),resEl=document.getElementById("res");
-function buildTabs(){tabsEl.innerHTML="";CALCS.forEach(function(c,k){var b=document.createElement("button");b.textContent=c.name;b.setAttribute("role","tab");b.setAttribute("aria-selected",k===cur);b.onclick=function(){cur=k;buildTabs();buildInputs();render()};tabsEl.appendChild(b)})}
+function buildTabs(){tabsEl.innerHTML="";CALCS.forEach(function(c,k){var b=document.createElement("button");b.textContent=c.name;b.setAttribute("role","tab");b.setAttribute("aria-selected",k===cur);b.onclick=function(){cur=k;try{history.replaceState(null,"","#"+c.id)}catch(e){}buildTabs();buildInputs();render()};tabsEl.appendChild(b)})}
 function buildInputs(){var c=CALCS[cur];inEl.innerHTML="";var p=document.createElement("p");p.className="desc";p.textContent=c.desc;inEl.appendChild(p);
  c.f.forEach(function(f){var d=document.createElement("div");d.className="f";var id="f_"+c.id+"_"+f.id;
   d.innerHTML='<div class="row"><label for="'+id+'">'+f.label+'</label><div class="box">'+(f.pre?'<span>'+f.pre+'</span>':'')+'<input type="number" id="'+id+'" min="'+f.min+'" max="'+f.max+'" step="'+f.step+'" inputmode="decimal">'+(f.suf?'<span>'+f.suf+'</span>':'')+'</div></div><input type="range" id="'+id+'_r" min="'+f.min+'" max="'+f.max+'" step="'+f.step+'" aria-label="'+f.label+'">';
