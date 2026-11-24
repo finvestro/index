@@ -3,194 +3,278 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Investment Calculators | Finvestro – SIP, Lumpsum, SWP &amp; Term Cover</title>
-<meta name="description" content="Free SIP, Lumpsum, SWP and Term Insurance calculators by Finvestro, Alwar. Plan your goals and talk to an expert on WhatsApp.">
+<title>Mutual Fund Distributor in India | SIP, Insurance &amp; Financial Planning – Finvestro</title>
+<meta name="description" content="Finvestro – The Investment Hub. AMFI-registered mutual fund distributor (ARN-318624) serving clients across India for SIP, lumpsum, STP, SWP, life, health and general insurance. Call or WhatsApp for a free consultation.">
+<meta name="keywords" content="mutual fund distributor, SIP investment, SIP calculator, financial planning, term insurance, health insurance, Finvestro">
+<link rel="canonical" href="https://finvestro.com/">
+<link rel="icon" href="Finvestro_Logo.png">
+<meta name="theme-color" content="#1e3a8a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Finvestro – The Investment Hub">
+<meta property="og:description" content="Mutual funds, SIP, insurance and financial planning for clients across India. ARN-318624.">
+<meta property="og:url" content="https://finvestro.com/">
+<meta property="og:image" content="https://finvestro.com/Finvestro_Logo.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FinancialService","name":"Finvestro – The Investment Hub","url":"https://finvestro.com/","logo":"https://finvestro.com/Finvestro_Logo.png","image":"https://finvestro.com/Finvestro_Logo.png","email":"finvestro.com@gmail.com","telephone":"+919166646162","description":"AMFI-registered mutual fund distributor (ARN-318624) offering SIP, lumpsum, STP, SWP, insurance and financial planning services to clients across India.","address":{"@type":"PostalAddress","streetAddress":"G7, Ground Floor, Wonder Mall","addressLocality":"Alwar","addressRegion":"Rajasthan","addressCountry":"IN"},"areaServed":"India","openingHours":"Mo-Sa 10:00-19:00"}
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;overflow-x:hidden;background:#f8f9fa}
-.header{background:#fff;color:#1e3a8a;padding:.9rem 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.10);border-bottom:1px solid #eef2f7}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;overflow-x:hidden}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+.header{background:#fff;padding:.9rem 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.1);border-bottom:1px solid #eef2f7}
 .nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
 .logo-img{width:190px;height:auto;display:block}
-.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
-.nav-links a{color:#1e3a8a;text-decoration:none;font-weight:500;transition:opacity .3s}
-.nav-links a:hover{opacity:.8}
-.nav-links a.on{border-bottom:2px solid #3b82f6;padding-bottom:2px}
-.menu-toggle{display:none;background:none;border:none;color:#1e3a8a;font-size:1.5rem;cursor:pointer}
-.hero{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;padding:60px 2rem 56px;text-align:center;margin-top:68px}
-.hero h1{font-size:2.5rem;margin-bottom:.6rem}
-.hero p{font-size:1.15rem;opacity:.95;max-width:640px;margin:0 auto}
-.wrap{max-width:1100px;margin:0 auto;padding:40px 1.2rem 60px}
-.tabs{display:flex;gap:10px;overflow-x:auto;margin-bottom:22px;padding-bottom:4px;justify-content:center;flex-wrap:wrap}
-.tabs button{border:2px solid #dbe4f0;background:#fff;color:#1e3a8a;font:inherit;font-weight:700;padding:11px 24px;border-radius:50px;cursor:pointer;transition:.25s}
-.tabs button:hover{border-color:#3b82f6}
-.tabs button[aria-selected="true"]{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);border-color:transparent;color:#fff}
-button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
-.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}
-.inputs{background:#fff;border-radius:15px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
-.desc{color:#666;margin-bottom:22px}
-.f{margin-bottom:22px}
-.f:last-child{margin-bottom:0}
-.row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}
-.row label{font-weight:700;color:#1e3a8a;font-size:.95rem}
-.box{display:flex;align-items:center;border:2px solid #e0e0e0;border-radius:8px;background:#f8f9fa;padding:0 10px;justify-content:flex-end;min-width:140px}
-.box:focus-within{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.1)}
-.box span{color:#666;font-size:.9rem}
-.box input{width:100px;border:0;background:transparent;font:inherit;font-weight:700;color:#1e3a8a;text-align:right;padding:7px 4px;outline:none}
-input[type=range]{width:100%;accent-color:#3b82f6}
-.res{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;border-radius:15px;padding:30px;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(30,58,138,.3)}
-.res small{opacity:.9;font-size:1rem}
-.big{font-size:clamp(2rem,6vw,2.8rem);font-weight:700;line-height:1.2;margin:4px 0;overflow-wrap:anywhere}
-.words{opacity:.9;margin-bottom:18px;min-height:1.6em}
-.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;background:rgba(255,255,255,.2);margin-bottom:8px}
-.bar i{display:block;height:100%}
-.legend{display:flex;gap:16px;font-size:.85rem;opacity:.95;margin-bottom:14px}
-.legend b{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
-dl{margin-bottom:16px}
-dl div{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;background:rgba(255,255,255,.1);border-radius:10px;margin-bottom:8px}
-dd{font-weight:700;text-align:right}
-.note{font-size:.85rem;opacity:.9;margin-bottom:18px}
-.cta{margin-top:auto;display:block;text-align:center;background:#fff;color:#1e3a8a;text-decoration:none;font-weight:700;padding:14px 20px;border-radius:50px;transition:transform .3s,box-shadow .3s}
-.cta:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
-.disc{margin-top:28px;font-size:.85rem;color:#666;background:#fff;border-left:4px solid #3b82f6;border-radius:8px;padding:14px 18px}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a,.drop-btn{color:#1e3a8a;text-decoration:none;font-weight:500;background:none;border:0;font:inherit;font-weight:500;cursor:pointer}
+.nav-links a:hover,.drop-btn:hover{opacity:.8}
+.services-dropdown{position:relative}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:260px;box-shadow:0 8px 16px rgba(0,0,0,.2);border-radius:8px;margin-top:.5rem;overflow:hidden}
+.services-dropdown:hover .dropdown-content,.dropdown-content.active{display:block}
+.dropdown-content a{padding:11px 20px;display:block;border-bottom:1px solid #f0f0f0}
+.dropdown-content a:hover{background:#f0f7ff}
+.menu-toggle{display:none;background:none;border:none;color:#1e3a8a;font-size:1.6rem;cursor:pointer}
+.hero{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;padding:120px 2rem 90px;text-align:center;margin-top:68px}
+.hero h1{font-size:2.8rem;margin-bottom:1rem}
+.hero p{font-size:1.25rem;margin:0 auto 2rem;max-width:720px}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-button{display:inline-block;text-decoration:none;background:#fff;color:#1e3a8a;padding:14px 36px;border-radius:50px;font-size:1.05rem;font-weight:700;transition:transform .3s,box-shadow .3s}
+.cta-button:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
+.cta-button.alt{background:transparent;color:#fff;border:2px solid #fff}
+.cta-button.wa{background:#25d366;color:#fff}
+.hero-stats{display:flex;justify-content:center;gap:3rem;margin-top:3rem;flex-wrap:wrap}
+.stat-number{font-size:2.2rem;font-weight:700;display:block}
+.stat-label{opacity:.9}
+section h2{text-align:center;font-size:2.3rem;color:#1e3a8a;margin-bottom:1rem}
+.subtitle{text-align:center;font-size:1.15rem;color:#666;margin-bottom:2.5rem}
+.services-overview{padding:80px 2rem;background:#f8f9fa}
+.services-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
+.service-card{background:#fff;padding:1.8rem;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1);text-align:center;text-decoration:none;color:inherit;display:block;transition:transform .3s,box-shadow .3s}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 15px 30px rgba(0,0,0,.15)}
+.service-icon{font-size:3rem;display:block;margin-bottom:.6rem}
+.service-card h3{color:#1e3a8a;margin-bottom:.6rem;font-size:1.3rem}
+.service-card p{color:#666}
+.service-details{padding:80px 2rem;background:#fff}
+.service-detail-section{max-width:1000px;margin:0 auto 3rem;display:grid;grid-template-columns:1fr 3fr;gap:2.5rem;align-items:center}
+.service-detail-icon{font-size:6rem;text-align:center}
+.service-detail-content h3{color:#1e3a8a;font-size:1.7rem;margin-bottom:.8rem}
+.service-detail-content p{color:#555;line-height:1.8;font-size:1.05rem}
+.about{padding:80px 2rem;background:#f8f9fa}
+.about-inner{max-width:900px;margin:0 auto}
+.about-text p{margin-bottom:1.3rem;font-size:1.1rem;line-height:1.8}
+.highlight{color:#1e3a8a;font-weight:700}
+.calc-band{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;text-align:center;padding:56px 2rem}
+.calc-band h2{color:#fff}
+.calc-band p{max-width:640px;margin:0 auto 1.6rem}
+.contact{padding:80px 2rem;background:#fff}
+.contact-container{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.contact-info{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);padding:2.5rem;border-radius:15px;color:#fff}
+.contact-info h3{margin-bottom:1.5rem;font-size:1.7rem}
+.info-item{margin-bottom:1.1rem;padding:1rem;background:rgba(255,255,255,.1);border-radius:10px}
+.info-item a{color:#fff}
+.contact-form{background:#f8f9fa;padding:2.5rem;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.form-group{margin-bottom:1.3rem}
+.form-group label{display:block;margin-bottom:.4rem;color:#1e3a8a;font-weight:700}
+.form-group input,.form-group textarea{width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:8px;font:inherit}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.form-group textarea{resize:vertical;min-height:110px}
+.consent{font-size:.85rem;color:#666;margin-bottom:1.2rem}
+.submit-button{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;padding:14px;border:none;border-radius:50px;font-size:1.1rem;font-weight:700;cursor:pointer;width:100%}
+.sent{display:none;max-width:1000px;margin:0 auto 1.5rem;background:#e7f7ee;border-left:4px solid #16a34a;padding:14px 18px;border-radius:8px;color:#14532d}
+.disclaimer{background:#eef2fb;padding:34px 2rem;font-size:.9rem;color:#444}
+.disclaimer div{max-width:1100px;margin:0 auto}
+.disclaimer p{margin-bottom:.6rem}
 .footer{background:#1e3a8a;color:#fff;text-align:center;padding:2.5rem 2rem}
-.footer p{margin-bottom:.4rem;font-size:.95rem}
-.footer a{color:#fff;text-decoration:none}
-.footer a:hover{text-decoration:underline}
-.footer .s{opacity:.85;font-size:.85rem;margin-top:1rem}
+.footer a{color:#fff}
+.footer p{margin-bottom:.5rem}
+.footer-bottom{margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.25);font-size:.9rem}
+.wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:1100;background:#25d366;color:#fff;text-decoration:none;font-weight:700;padding:13px 20px;border-radius:50px;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.wa-float:hover{background:#1ebe5b}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media (max-width:768px){
-.logo-img{width:155px}
+.logo-img{width:150px}
 .menu-toggle{display:block}
-.nav-links{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:1rem;display:none;gap:1rem;box-shadow:0 8px 12px rgba(0,0,0,.08)}
+.nav-container{padding:0 1rem}
+.nav-links{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:flex-start;padding:1rem 1.4rem;display:none;gap:.9rem;box-shadow:0 8px 12px rgba(0,0,0,.1)}
 .nav-links.active{display:flex}
-.hero h1{font-size:1.9rem}
-.hero p{font-size:1rem}
-.grid{grid-template-columns:1fr}
-.inputs,.res{padding:22px}
+.services-dropdown:hover .dropdown-content{display:none}
+.services-dropdown .dropdown-content.active{display:block}
+.dropdown-content{position:static;box-shadow:none;background:#f0f7ff;margin-top:.4rem;min-width:0}
+.hero{padding:70px 1.2rem 60px}
+.hero h1{font-size:2rem}
+.hero p{font-size:1.05rem}
+.hero-stats{gap:1.5rem}
+.service-detail-section,.contact-container{grid-template-columns:1fr}
+.service-detail-icon{font-size:3.5rem}
+.contact-info,.contact-form{padding:1.6rem}
+.wa-float{padding:12px 16px}
 }
 </style>
 </head>
 <body>
 <header class="header">
-<nav class="nav-container">
-<a href="index.html"><img src="Finvestro_Logo.png" alt="Finvestro Logo" class="logo-img"></a>
-<button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
+<nav class="nav-container" aria-label="Main">
+<a href="/"><img src="Finvestro_Logo.png" alt="Finvestro – The Investment Hub logo" class="logo-img"></a>
+<button class="menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
 <ul class="nav-links" id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="index.html#services">Services</a></li>
-<li><a href="calculators.html" class="on">Calculators</a></li>
-<li><a href="index.html#about">About Us</a></li>
-<li><a href="index.html#contact">Contact</a></li>
+<li><a href="#home">Home</a></li>
+<li class="services-dropdown">
+<button class="drop-btn" id="dropBtn" aria-expanded="false">Services ▾</button>
+<div class="dropdown-content" id="servicesDropdown">
+<a href="#service-sip">SIP Investments</a>
+<a href="#service-lumpsum">Lumpsum Investment</a>
+<a href="#service-stp">STP &amp; SWP</a>
+<a href="#service-planning">Financial Planning</a>
+<a href="#service-life">Life Insurance</a>
+<a href="#service-health">Health Insurance</a>
+<a href="#service-general">General Insurance</a>
+<a href="#service-realestate">Real Estate</a>
+</div>
+</li>
+<li><a href="calculators.html">Calculators</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 </header>
 
-<section class="hero">
-<h1>Investment Calculators</h1>
-<p>Move the sliders and see what your money could grow into. Free to use, no sign-up needed.</p>
+<main>
+<section id="home" class="hero">
+<h1>Your Guide to Smarter Mutual Fund Investments</h1>
+<p>SIP, insurance and financial planning for individuals and families across India. Finvestro – The Investment Hub (ARN-318624).</p>
+<div class="btns">
+<a class="cta-button" href="#contact">Get a Free Consultation</a>
+<a class="cta-button alt" href="calculators.html">Try Free SIP Calculator</a>
+<a class="cta-button wa" target="_blank" rel="noopener" href="https://wa.me/919166646162?text=Hi%20Finvestro%2C%20I%20would%20like%20a%20free%20consultation.">💬 Chat on WhatsApp</a>
+</div>
+<div class="hero-stats">
+<div><span class="stat-number">10+</span><span class="stat-label">Years Experience</span></div>
+<div><span class="stat-number">1000+</span><span class="stat-label">Clients Served</span></div>
+<div><span class="stat-number">ARN-318624</span><span class="stat-label">AMFI-registered Distributor</span></div>
+</div>
 </section>
 
-<main class="wrap">
-<div class="tabs" role="tablist" id="tabs"></div>
-<div class="grid">
-<section class="inputs" id="inputs" aria-label="Inputs"></section>
-<section class="res" id="res" aria-live="polite" aria-label="Result"></section>
+<section id="services" class="services-overview">
+<h2>Our Services</h2>
+<p class="subtitle">Financial solutions for every stage of life</p>
+<div class="services-grid">
+<a class="service-card" href="#service-sip"><span class="service-icon">📊</span><h3>SIP Investments</h3><p>Invest regularly in mutual funds, starting from ₹500 a month.</p></a>
+<a class="service-card" href="#service-lumpsum"><span class="service-icon">💰</span><h3>Lumpsum Investment</h3><p>Invest a one-time amount in mutual fund schemes that match your goals.</p></a>
+<a class="service-card" href="#service-stp"><span class="service-icon">🔄</span><h3>STP &amp; SWP</h3><p>Transfer or withdraw from mutual funds in a planned, regular way.</p></a>
+<a class="service-card" href="#service-planning"><span class="service-icon">💡</span><h3>Financial Planning</h3><p>A clear roadmap for retirement, education and other life goals.</p></a>
+<a class="service-card" href="#service-life"><span class="service-icon">🛡️</span><h3>Life Insurance</h3><p>Term and life insurance to protect your family’s future.</p></a>
+<a class="service-card" href="#service-health"><span class="service-icon">🏥</span><h3>Health Insurance</h3><p>Cover for hospital bills for you and your family.</p></a>
+<a class="service-card" href="#service-general"><span class="service-icon">🏠</span><h3>General Insurance</h3><p>Home, motor, travel and business insurance.</p></a>
+<a class="service-card" href="#service-realestate"><span class="service-icon">🏢</span><h3>Real Estate</h3><p>Guidance on property, REITs and home loans.</p></a>
 </div>
-<p class="disc">Mutual fund investments are subject to market risks. Read all scheme related documents carefully. These calculators show illustrative figures based on a constant assumed return. Actual returns will vary and are not guaranteed. Past performance may or may not be sustained in future.</p>
+</section>
+
+<section class="service-details" aria-label="Detailed services">
+<h2>Detailed Services</h2>
+<p class="subtitle">What each service means and how we help</p>
+
+<article class="service-detail-section" id="service-sip"><div class="service-detail-icon">📊</div><div class="service-detail-content"><h3>Systematic Investment Plan (SIP)</h3>
+<p>A SIP lets you invest a fixed amount in mutual funds every month, starting from as little as ₹500. It builds a saving habit and spreads your purchases across market ups and downs (rupee cost averaging). We help you pick schemes that suit your risk appetite, time horizon and goals such as retirement or your child’s education.</p></div></article>
+
+<article class="service-detail-section" id="service-lumpsum"><div class="service-detail-icon">💰</div><div class="service-detail-content"><h3>Lumpsum Investment</h3>
+<p>Lumpsum means investing a larger amount in one go, for example a bonus, inheritance or sale proceeds. We help you understand equity, debt and hybrid schemes and choose a mix that fits your goals and your comfort with risk.</p></div></article>
+
+<article class="service-detail-section" id="service-stp"><div class="service-detail-icon">🔄</div><div class="service-detail-content"><h3>STP &amp; SWP</h3>
+<p>A Systematic Transfer Plan (STP) moves a fixed amount from one scheme to another at regular intervals. A Systematic Withdrawal Plan (SWP) gives you a regular payout from your mutual fund investment. We help you set these up according to your cash-flow needs. Tax treatment depends on your situation, so please consult a tax professional.</p></div></article>
+
+<article class="service-detail-section" id="service-planning"><div class="service-detail-icon">💡</div><div class="service-detail-content"><h3>Financial Planning</h3>
+<p>We look at your income, expenses, savings and liabilities, then help you set goals with timelines for retirement, children’s education, an emergency fund and more. We review your plan with you from time to time as your life changes.</p></div></article>
+
+<article class="service-detail-section" id="service-life"><div class="service-detail-icon">🛡️</div><div class="service-detail-content"><h3>Life &amp; Term Insurance</h3>
+<p>Life insurance gives your family financial support in your absence. Term insurance is pure protection with a high cover amount at a low premium. We help you estimate the cover you need and compare plans on premium, claim settlement ratio and riders. Try our <a href="calculators.html">Term Cover calculator</a>.</p></div></article>
+
+<article class="service-detail-section" id="service-health"><div class="service-detail-icon">🏥</div><div class="service-detail-content"><h3>Health Insurance</h3>
+<p>Health insurance helps with hospitalisation, day-care procedures and critical illness costs. We guide you on individual, family floater, senior citizen and top-up plans, and explain waiting periods, exclusions and the claim process so there are no surprises.</p></div></article>
+
+<article class="service-detail-section" id="service-general"><div class="service-detail-icon">🏠</div><div class="service-detail-content"><h3>General Insurance</h3>
+<p>Protect your assets with home, motor, travel, personal accident and business insurance. We explain the policy terms, coverage limits and claim steps in simple language.</p></div></article>
+
+<article class="service-detail-section" id="service-realestate"><div class="service-detail-icon">🏢</div><div class="service-detail-content"><h3>Real Estate Guidance</h3>
+<p>We share information on residential and commercial property, REITs and home loan options. Property prices can go up or down, so please verify RERA registration and legal documents before you buy.</p></div></article>
+</section>
+
+<section class="calc-band">
+<h2>Plan Your Goals with Free Calculators</h2>
+<p>Check what your SIP could grow to, how long an SWP can last, or how much term cover your family may need.</p>
+<a class="cta-button" href="calculators.html">Open Calculators</a>
+</section>
+
+<section id="about" class="about">
+<h2>About Finvestro</h2>
+<div class="about-inner about-text">
+<p><span class="highlight">Finvestro – The Investment Hub</span> is an AMFI-registered mutual fund distributor with its office in Alwar, Rajasthan, serving clients across India. We help individuals and families with mutual fund investments, insurance and financial planning.</p>
+<p>We are an AMFI-registered mutual fund distributor, <span class="highlight">ARN-318624</span>. Our team gives personal attention to every client and explains the risks and costs in simple words before you invest.</p>
+<p>At Finvestro we believe in transparency, honesty and long-term relationships. Whether you are planning for retirement, your child’s education or protecting your family, you can call or WhatsApp us any time during business hours.</p>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p class="subtitle">Call, WhatsApp or send us a message. We will get back to you.</p>
+<div class="sent" id="sentMsg" role="status">Thank you! Your message has been sent. We will contact you soon.</div>
+<div class="contact-container">
+<div class="contact-info">
+<h3>Get In Touch</h3>
+<div class="info-item"><strong>📍 Address</strong><br>G7, Ground Floor, Wonder Mall<br>Alwar, Rajasthan</div>
+<div class="info-item"><strong>📧 Email</strong><br><a href="mailto:finvestro.com@gmail.com">finvestro.com@gmail.com</a></div>
+<div class="info-item"><strong>📱 Hitesh Sharma</strong><br><a href="tel:+919166646162">+91 9166646162</a></div>
+<div class="info-item"><strong>📱 Arun Sharma</strong><br><a href="tel:+918432846674">+91 8432846674</a></div>
+<div class="info-item"><strong>⏰ Business Hours</strong><br>Mon – Sat: 10:00 AM – 7:00 PM<br>Sunday: Closed</div>
+<a class="cta-button wa" style="display:block;text-align:center" target="_blank" rel="noopener" href="https://wa.me/919166646162?text=Hi%20Finvestro%2C%20I%20would%20like%20to%20talk%20to%20an%20expert.">💬 Chat on WhatsApp</a>
+</div>
+<div class="contact-form">
+<form id="contactForm" action="https://formsubmit.co/finvestro.com@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Finvestro Website Enquiry">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://finvestro.com/?sent=1">
+<div class="form-group"><label for="name">Name *</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+<div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email"></div>
+<div class="form-group"><label for="phone">Phone *</label><input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9+ ]{10,14}" title="Enter a valid phone number" required></div>
+<div class="form-group"><label for="message">Message *</label><textarea id="message" name="message" required></textarea></div>
+<p class="consent">By submitting this form you agree to be contacted by Finvestro about your enquiry. We do not share your details with anyone else.</p>
+<button type="submit" class="submit-button">Send Message</button>
+</form>
+</div>
+</div>
+</section>
 </main>
 
+<section class="disclaimer" aria-label="Disclaimer">
+<div>
+<p><strong>Mutual fund investments are subject to market risks. Read all scheme related documents carefully.</strong> Past performance may or may not be sustained in future. Returns are not guaranteed.</p>
+<p>Finvestro is an AMFI-registered Mutual Fund Distributor (ARN-318624). Calculators and illustrations on this website are for general information only and are not investment advice or a promise of returns.</p>
+<p>Insurance is the subject matter of solicitation. Insurance products are offered through our insurer partners, and policy terms and conditions apply. Real estate information is general in nature; please verify RERA registration and legal documents before any purchase.</p>
+</div>
+</section>
+
 <footer class="footer">
-<p><strong>Finvestro – The Investment Hub</strong></p>
-<p>ARN: 318624 | Authorized Mutual Fund Distributor</p>
+<p><strong>📈 Finvestro – The Investment Hub</strong></p>
+<p>SIP | STP | SWP | Lumpsum | Financial Planning | Life, Health &amp; General Insurance | Real Estate Guidance</p>
+<p><strong>ARN-318624</strong> | AMFI-registered Mutual Fund Distributor</p>
+<div class="footer-bottom">
+<p>&copy; <span id="yr">2026</span> Finvestro. All rights reserved.</p>
 <p>G7, Ground Floor, Wonder Mall, Alwar, Rajasthan</p>
 <p><a href="mailto:finvestro.com@gmail.com">finvestro.com@gmail.com</a> | Hitesh: <a href="tel:+919166646162">+91 9166646162</a> | Arun: <a href="tel:+918432846674">+91 8432846674</a></p>
-<p class="s">&copy; 2025 Finvestro. All rights reserved.</p>
+</div>
 </footer>
 
+<a class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Finvestro on WhatsApp" href="https://wa.me/919166646162?text=Hi%20Finvestro%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services.">💬 WhatsApp</a>
+
 <script>
-var PHONE="919166646162";
-function inr(n){return "₹"+Math.round(n).toLocaleString("en-IN")}
-function words(n){n=Math.round(n);if(n>=1e7)return (n/1e7).toFixed(2)+" Crore";if(n>=1e5)return (n/1e5).toFixed(2)+" Lakh";return ""}
-var CALCS=[
-{id:"sip",name:"SIP",desc:"Invest a fixed amount every month and see the power of compounding.",
- f:[{id:"a",label:"Monthly investment",min:500,max:200000,step:500,val:10000,pre:"₹"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"},
-    {id:"i",label:"Inflation (p.a.)",min:0,max:10,step:.5,val:6,suf:"%"}],
- calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,n=v.y*12,fv=i?v.a*((Math.pow(1+i,n)-1)/i)*(1+i):v.a*n,inv=v.a*n;
-  return {label:"Estimated value",val:fv,split:[inv,fv-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(fv-inv)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes the SIP is paid at the start of each month. The yearly return is converted to an equivalent monthly rate."}}},
-{id:"lump",name:"Lumpsum",desc:"Invest one amount today and see its value after a few years.",
- f:[{id:"a",label:"Investment amount",min:5000,max:10000000,step:5000,val:500000,pre:"₹"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"},
-    {id:"i",label:"Inflation (p.a.)",min:0,max:10,step:.5,val:6,suf:"%"}],
- calc:function(v){var fv=v.a*Math.pow(1+v.r/100,v.y);
-  return {label:"Estimated value",val:fv,split:[v.a,fv-v.a],rows:[["Amount invested",inr(v.a)],["Estimated gains",inr(fv-v.a)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes yearly compounding at a constant return."}}},
-{id:"swp",name:"SWP",desc:"Withdraw a fixed amount every month from your investment and check how long it lasts.",
- f:[{id:"a",label:"Total investment",min:100000,max:50000000,step:100000,val:5000000,pre:"₹"},
-    {id:"w",label:"Monthly withdrawal",min:1000,max:500000,step:1000,val:30000,pre:"₹"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:20,step:.5,val:9,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:15,suf:"yrs"}],
- calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,b=v.a,m=v.y*12,ended=0;
-  for(var k=1;k<=m;k++){b=b*(1+i)-v.w;if(b<=0){b=0;ended=k;break}}
-  var months=ended||m,lasted=ended?Math.floor(ended/12)+" yrs "+(ended%12)+" months":"Full "+v.y+" years";
-  return {label:ended?"Your money lasts about":"Balance after "+v.y+" years",val:b,text:ended?lasted:null,split:null,
-   rows:[["Total withdrawn",inr(v.w*months)],["Final balance",inr(b)],["Lasts",lasted]],
-   note:ended?"At this withdrawal your investment runs out early. Try a lower withdrawal or a longer period.":"Withdrawals are made at the end of each month after returns are added."}}},
-{id:"term",name:"Term Cover",desc:"Find out how much life cover your family may need.",
- f:[{id:"e",label:"Yearly family expenses",min:100000,max:5000000,step:50000,val:600000,pre:"₹"},
-    {id:"y",label:"Years your family needs support",min:5,max:40,step:1,val:20,suf:"yrs"},
-    {id:"l",label:"Loans to repay",min:0,max:20000000,step:100000,val:2000000,pre:"₹"},
-    {id:"g",label:"Future goals (education, marriage)",min:0,max:20000000,step:100000,val:2500000,pre:"₹"},
-    {id:"s",label:"Existing investments and cover",min:0,max:30000000,step:100000,val:1500000,pre:"₹"}],
- calc:function(v){var rr=1.08/1.06-1,pv=v.e*(1-Math.pow(1+rr,-v.y))/rr,need=pv+v.l+v.g-v.s,c=Math.max(0,Math.round(need/100000)*100000);
-  return {label:"Suggested life cover",val:c,split:null,rows:[["Family expenses (today’s value)",inr(pv)],["Loans and goals",inr(v.l+v.g)],["Less existing savings and cover","− "+inr(v.s)]],
-   note:"A simple estimate assuming 8% returns and 6% inflation. A proper needs analysis also looks at your age, income and health."}}},
-{id:"goal",name:"Goal SIP",desc:"Find the monthly SIP needed to reach a target amount.",
- f:[{id:"g",label:"Target amount",min:100000,max:100000000,step:100000,val:5000000,pre:"₹"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"}],
- calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,n=v.y*12,p=v.g*i/((Math.pow(1+i,n)-1)*(1+i)),inv=p*n;
-  return {label:"Monthly SIP needed",val:p,split:[inv,v.g-inv],rows:[["Target amount",inr(v.g)],["Total invested",inr(inv)],["Estimated gains",inr(v.g-inv)]],note:"Assumes the SIP is paid at the start of each month. The yearly return is converted to an equivalent monthly rate."}}},
-{id:"step",name:"Step-up SIP",desc:"Increase your SIP every year as your income grows.",
- f:[{id:"a",label:"Starting monthly SIP",min:500,max:200000,step:500,val:10000,pre:"₹"},
-    {id:"s",label:"Yearly increase in SIP",min:0,max:25,step:1,val:10,suf:"%"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"}],
- calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,b=0,inv=0,p=v.a;
-  for(var m=1;m<=v.y*12;m++){b=(b+p)*(1+i);inv+=p;if(m%12===0)p*=1+v.s/100}
-  return {label:"Estimated value",val:b,split:[inv,b-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(b-inv)],["SIP amount in the last year",inr(p/(1+v.s/100))]],note:"The SIP amount goes up once a year. Returns are assumed constant."}}},
-{id:"stp",name:"STP",desc:"Keep money in a debt fund and move a fixed amount to an equity fund every month.",
- f:[{id:"l",label:"Amount in debt fund",min:100000,max:50000000,step:100000,val:1200000,pre:"₹"},
-    {id:"t",label:"Monthly transfer to equity fund",min:1000,max:1000000,step:1000,val:50000,pre:"₹"},
-    {id:"d",label:"Debt fund return (p.a.)",min:1,max:10,step:.5,val:7,suf:"%"},
-    {id:"e",label:"Equity fund return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:10,step:1,val:2,suf:"yrs"}],
- calc:function(v){var id=Math.pow(1+v.d/100,1/12)-1,ie=Math.pow(1+v.e/100,1/12)-1,D=v.l,E=0,n=v.y*12,k,x;
-  for(k=1;k<=n;k++){D*=1+id;x=Math.min(v.t,D);D-=x;E=E*(1+ie)+x}
-  var tot=D+E,debt=v.l*Math.pow(1+id,n);
-  return {label:"Total value after "+v.y+" years",val:tot,split:[v.l,tot-v.l],rows:[["Equity fund value",inr(E)],["Debt fund balance",inr(D)],["If kept only in debt fund",inr(debt)]],note:"Transfers stop when the debt fund is empty. Tax, exit load and expenses are not included."}}}
-];
-var cur=0,vals={};
-CALCS.forEach(function(c){vals[c.id]={};c.f.forEach(function(f){vals[c.id][f.id]=f.val})});
-var tabsEl=document.getElementById("tabs"),inEl=document.getElementById("inputs"),resEl=document.getElementById("res");
-function buildTabs(){tabsEl.innerHTML="";CALCS.forEach(function(c,k){var b=document.createElement("button");b.textContent=c.name;b.setAttribute("role","tab");b.setAttribute("aria-selected",k===cur);b.onclick=function(){cur=k;buildTabs();buildInputs();render()};tabsEl.appendChild(b)})}
-function buildInputs(){var c=CALCS[cur];inEl.innerHTML="";var p=document.createElement("p");p.className="desc";p.textContent=c.desc;inEl.appendChild(p);
- c.f.forEach(function(f){var d=document.createElement("div");d.className="f";var id="f_"+c.id+"_"+f.id;
-  d.innerHTML='<div class="row"><label for="'+id+'">'+f.label+'</label><div class="box">'+(f.pre?'<span>'+f.pre+'</span>':'')+'<input type="number" id="'+id+'" min="'+f.min+'" max="'+f.max+'" step="'+f.step+'" inputmode="decimal">'+(f.suf?'<span>'+f.suf+'</span>':'')+'</div></div><input type="range" id="'+id+'_r" min="'+f.min+'" max="'+f.max+'" step="'+f.step+'" aria-label="'+f.label+'">';
-  inEl.appendChild(d);
-  var n=d.querySelector("#"+id),r=d.querySelector("#"+id+"_r");n.value=r.value=vals[c.id][f.id];
-  n.oninput=function(){var x=parseFloat(n.value);if(isNaN(x))return;vals[c.id][f.id]=x;r.value=x;render()};
-  r.oninput=function(){var x=parseFloat(r.value);vals[c.id][f.id]=x;n.value=x;render()}})}
-function render(){var c=CALCS[cur],v=vals[c.id],o=c.calc(v),h="";
- var big=o.text?o.text:inr(o.val),w=(!o.text&&o.val!=null)?words(o.val):"";
- h+='<small>'+o.label+'</small><div class="big">'+big+'</div><div class="words">'+(w?"About ₹"+w:"")+'</div>';
- if(o.split){var t=o.split[0]+o.split[1],a=Math.max(0,o.split[0]/t*100);
-  h+='<div class="bar" role="img" aria-label="Invested versus gains"><i style="width:'+a+'%;background:#bfdbfe"></i><i style="width:'+(100-a)+'%;background:#fbbf24"></i></div><div class="legend"><span><b style="background:#bfdbfe"></b>Invested</span><span><b style="background:#fbbf24"></b>Gains</span></div>'}
- h+='<dl>'+o.rows.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join("")+'</dl><p class="note">'+o.note+'</p>';
- var msg="Hi Finvestro, I used the "+c.name+" calculator on your website. Result: "+o.label+" "+big+". I would like to talk to an expert.";
- h+='<a class="cta" target="_blank" rel="noopener" href="https://wa.me/'+PHONE+'?text='+encodeURIComponent(msg)+'">Talk to an expert on WhatsApp</a>';
- resEl.innerHTML=h}
-buildTabs();buildInputs();render();
+(function(){
+var nav=document.getElementById('navLinks'),menuBtn=document.getElementById('menuBtn'),dd=document.getElementById('servicesDropdown'),dropBtn=document.getElementById('dropBtn');
+menuBtn.addEventListener('click',function(){var o=nav.classList.toggle('active');menuBtn.setAttribute('aria-expanded',o)});
+dropBtn.addEventListener('click',function(){var o=dd.classList.toggle('active');dropBtn.setAttribute('aria-expanded',o)});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('active');dd.classList.remove('active')})});
+document.getElementById('yr').textContent=new Date().getFullYear();
+if(location.search.indexOf('sent=1')>-1){var m=document.getElementById('sentMsg');m.style.display='block';m.scrollIntoView({block:'center'})}
+})();
 </script>
 </body>
 </html>
