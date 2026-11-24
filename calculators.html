@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investment Calculators | Finvestro – SIP, Lumpsum, SWP &amp; Term Cover</title>
+<meta name="description" content="Free SIP, Lumpsum, SWP and Term Insurance calculators by Finvestro, Alwar. Plan your goals and talk to an expert on WhatsApp.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;overflow-x:hidden;background:#f8f9fa}
+.header{background:#fff;color:#1e3a8a;padding:.9rem 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.10);border-bottom:1px solid #eef2f7}
+.nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo-img{width:190px;height:auto;display:block}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{color:#1e3a8a;text-decoration:none;font-weight:500;transition:opacity .3s}
+.nav-links a:hover{opacity:.8}
+.nav-links a.on{border-bottom:2px solid #3b82f6;padding-bottom:2px}
+.menu-toggle{display:none;background:none;border:none;color:#1e3a8a;font-size:1.5rem;cursor:pointer}
+.hero{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;padding:60px 2rem 56px;text-align:center;margin-top:68px}
+.hero h1{font-size:2.5rem;margin-bottom:.6rem}
+.hero p{font-size:1.15rem;opacity:.95;max-width:640px;margin:0 auto}
+.wrap{max-width:1100px;margin:0 auto;padding:40px 1.2rem 60px}
+.tabs{display:flex;gap:10px;overflow-x:auto;margin-bottom:22px;padding-bottom:4px;justify-content:center;flex-wrap:wrap}
+.tabs button{border:2px solid #dbe4f0;background:#fff;color:#1e3a8a;font:inherit;font-weight:700;padding:11px 24px;border-radius:50px;cursor:pointer;transition:.25s}
+.tabs button:hover{border-color:#3b82f6}
+.tabs button[aria-selected="true"]{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);border-color:transparent;color:#fff}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}
+.inputs{background:#fff;border-radius:15px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.desc{color:#666;margin-bottom:22px}
+.f{margin-bottom:22px}
+.f:last-child{margin-bottom:0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}
+.row label{font-weight:700;color:#1e3a8a;font-size:.95rem}
+.box{display:flex;align-items:center;border:2px solid #e0e0e0;border-radius:8px;background:#f8f9fa;padding:0 10px;justify-content:flex-end;min-width:140px}
+.box:focus-within{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+.box span{color:#666;font-size:.9rem}
+.box input{width:100px;border:0;background:transparent;font:inherit;font-weight:700;color:#1e3a8a;text-align:right;padding:7px 4px;outline:none}
+input[type=range]{width:100%;accent-color:#3b82f6}
+.res{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;border-radius:15px;padding:30px;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(30,58,138,.3)}
+.res small{opacity:.9;font-size:1rem}
+.big{font-size:clamp(2rem,6vw,2.8rem);font-weight:700;line-height:1.2;margin:4px 0;overflow-wrap:anywhere}
+.words{opacity:.9;margin-bottom:18px;min-height:1.6em}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;background:rgba(255,255,255,.2);margin-bottom:8px}
+.bar i{display:block;height:100%}
+.legend{display:flex;gap:16px;font-size:.85rem;opacity:.95;margin-bottom:14px}
+.legend b{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+dl{margin-bottom:16px}
+dl div{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;background:rgba(255,255,255,.1);border-radius:10px;margin-bottom:8px}
+dd{font-weight:700;text-align:right}
+.note{font-size:.85rem;opacity:.9;margin-bottom:18px}
+.cta{margin-top:auto;display:block;text-align:center;background:#fff;color:#1e3a8a;text-decoration:none;font-weight:700;padding:14px 20px;border-radius:50px;transition:transform .3s,box-shadow .3s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
+.disc{margin-top:28px;font-size:.85rem;color:#666;background:#fff;border-left:4px solid #3b82f6;border-radius:8px;padding:14px 18px}
+.footer{background:#1e3a8a;color:#fff;text-align:center;padding:2.5rem 2rem}
+.footer p{margin-bottom:.4rem;font-size:.95rem}
+.footer a{color:#fff;text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer .s{opacity:.85;font-size:.85rem;margin-top:1rem}
+@media (max-width:768px){
+.logo-img{width:155px}
+.menu-toggle{display:block}
+.nav-links{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:1rem;display:none;gap:1rem;box-shadow:0 8px 12px rgba(0,0,0,.08)}
+.nav-links.active{display:flex}
+.hero h1{font-size:1.9rem}
+.hero p{font-size:1rem}
+.grid{grid-template-columns:1fr}
+.inputs,.res{padding:22px}
+}
+</style>
+</head>
+<body>
+<header class="header">
+<nav class="nav-container">
+<a href="index.html"><img src="Finvestro_Logo.png" alt="Finvestro Logo" class="logo-img"></a>
+<button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="calculators.html" class="on">Calculators</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
 
+<section class="hero">
+<h1>Investment Calculators</h1>
+<p>Move the sliders and see what your money could grow into. Free to use, no sign-up needed.</p>
+</section>
+
+<main class="wrap">
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="grid">
+<section class="inputs" id="inputs" aria-label="Inputs"></section>
+<section class="res" id="res" aria-live="polite" aria-label="Result"></section>
+</div>
+<p class="disc">Mutual fund investments are subject to market risks. Read all scheme related documents carefully. These calculators show illustrative figures based on a constant assumed return. Actual returns will vary and are not guaranteed. Past performance may or may not be sustained in future.</p>
+</main>
+
+<footer class="footer">
+<p><strong>Finvestro – The Investment Hub</strong></p>
+<p>ARN: 318624 | Authorized Mutual Fund Distributor</p>
+<p>G7, Ground Floor, Wonder Mall, Alwar, Rajasthan</p>
+<p><a href="mailto:finvestro.com@gmail.com">finvestro.com@gmail.com</a> | Hitesh: <a href="tel:+919166646162">+91 9166646162</a> | Arun: <a href="tel:+918432846674">+91 8432846674</a></p>
+<p class="s">&copy; 2025 Finvestro. All rights reserved.</p>
+</footer>
+
+<script>
+var PHONE="919166646162";
+function inr(n){return "₹"+Math.round(n).toLocaleString("en-IN")}
+function words(n){n=Math.round(n);if(n>=1e7)return (n/1e7).toFixed(2)+" Crore";if(n>=1e5)return (n/1e5).toFixed(2)+" Lakh";return ""}
+var CALCS=[
+{id:"sip",name:"SIP",desc:"Invest a fixed amount every month and see the power of compounding.",
+ f:[{id:"a",label:"Monthly investment",min:500,max:200000,step:500,val:10000,pre:"₹"},
+    {id:"r",label:"Expected return (p.a.)",min:1,max:30,step:.5,val:12,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:40,step:1,val:15,suf:"yrs"}],
+ calc:function(v){var i=v.r/1200,n=v.y*12,fv=i?v.a*((Math.pow(1+i,n)-1)/i)*(1+i):v.a*n,inv=v.a*n;
+  return {label:"Estimated value",val:fv,split:[inv,fv-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(fv-inv)]],note:"Assumes the SIP is paid at the start of each month at a constant return."}}},
+{id:"lump",name:"Lumpsum",desc:"Invest one amount today and see its value after a few years.",
+ f:[{id:"a",label:"Investment amount",min:5000,max:10000000,step:5000,val:500000,pre:"₹"},
+    {id:"r",label:"Expected return (p.a.)",min:1,max:30,step:.5,val:12,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"}],
+ calc:function(v){var fv=v.a*Math.pow(1+v.r/100,v.y);
+  return {label:"Estimated value",val:fv,split:[v.a,fv-v.a],rows:[["Amount invested",inr(v.a)],["Estimated gains",inr(fv-v.a)]],note:"Assumes yearly compounding at a constant return."}}},
+{id:"swp",name:"SWP",desc:"Withdraw a fixed amount every month from your investment and check how long it lasts.",
+ f:[{id:"a",label:"Total investment",min:100000,max:50000000,step:100000,val:5000000,pre:"₹"},
+    {id:"w",label:"Monthly withdrawal",min:1000,max:500000,step:1000,val:30000,pre:"₹"},
+    {id:"r",label:"Expected return (p.a.)",min:1,max:20,step:.5,val:9,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:40,step:1,val:15,suf:"yrs"}],
+ calc:function(v){var i=v.r/1200,b=v.a,m=v.y*12,ended=0;
+  for(var k=1;k<=m;k++){b=b*(1+i)-v.w;if(b<=0){b=0;ended=k;break}}
+  var months=ended||m,lasted=ended?Math.floor(ended/12)+" yrs "+(ended%12)+" months":"Full "+v.y+" years";
+  return {label:ended?"Your money lasts about":"Balance after "+v.y+" years",val:b,text:ended?lasted:null,split:null,
+   rows:[["Total withdrawn",inr(v.w*months)],["Final balance",inr(b)],["Lasts",lasted]],
+   note:ended?"At this withdrawal your investment runs out early. Try a lower withdrawal or a longer period.":"Withdrawals are made at the end of each month after returns are added."}}},
+{id:"term",name:"Term Cover",desc:"Find out how much life cover your family may need.",
+ f:[{id:"e",label:"Yearly family expenses",min:100000,max:5000000,step:50000,val:600000,pre:"₹"},
+    {id:"y",label:"Years your family needs support",min:5,max:40,step:1,val:20,suf:"yrs"},
+    {id:"l",label:"Loans to repay",min:0,max:20000000,step:100000,val:2000000,pre:"₹"},
+    {id:"g",label:"Future goals (education, marriage)",min:0,max:20000000,step:100000,val:2500000,pre:"₹"},
+    {id:"s",label:"Existing investments and cover",min:0,max:30000000,step:100000,val:1500000,pre:"₹"}],
+ calc:function(v){var rr=1.08/1.06-1,pv=v.e*(1-Math.pow(1+rr,-v.y))/rr,need=pv+v.l+v.g-v.s,c=Math.max(0,Math.round(need/100000)*100000);
+  return {label:"Suggested life cover",val:c,split:null,rows:[["Family expenses (today’s value)",inr(pv)],["Loans and goals",inr(v.l+v.g)],["Less existing savings and cover","− "+inr(v.s)]],
+   note:"A simple estimate assuming 8% returns and 6% inflation. A proper needs analysis also looks at your age, income and health."}}}
+];
+var cur=0,vals={};
+CALCS.forEach(function(c){vals[c.id]={};c.f.forEach(function(f){vals[c.id][f.id]=f.val})});
+var tabsEl=document.getElementById("tabs"),inEl=document.getElementById("inputs"),resEl=document.getElementById("res");
+function buildTabs(){tabsEl.innerHTML="";CALCS.forEach(function(c,k){var b=document.createElement("button");b.textContent=c.name;b.setAttribute("role","tab");b.setAttribute("aria-selected",k===cur);b.onclick=function(){cur=k;buildTabs();buildInputs();render()};tabsEl.appendChild(b)})}
+function buildInputs(){var c=CALCS[cur];inEl.innerHTML="";var p=document.createElement("p");p.className="desc";p.textContent=c.desc;inEl.appendChild(p);
+ c.f.forEach(function(f){var d=document.createElement("div");d.className="f";var id="f_"+c.id+"_"+f.id;
+  d.innerHTML='<div class="row"><label for="'+id+'">'+f.label+'</label><div class="box">'+(f.pre?'<span>'+f.pre+'</span>':'')+'<input type="number" id="'+id+'" min="'+f.min+'" max="'+f.max+'" step="'+f.step+'" inputmode="decimal">'+(f.suf?'<span>'+f.suf+'</span>':'')+'</div></div><input type="range" id="'+id+'_r" min="'+f.min+'" max="'+f.max+'" step="'+f.step+'" aria-label="'+f.label+'">';
+  inEl.appendChild(d);
+  var n=d.querySelector("#"+id),r=d.querySelector("#"+id+"_r");n.value=r.value=vals[c.id][f.id];
+  n.oninput=function(){var x=parseFloat(n.value);if(isNaN(x))return;vals[c.id][f.id]=x;r.value=x;render()};
+  r.oninput=function(){var x=parseFloat(r.value);vals[c.id][f.id]=x;n.value=x;render()}})}
+function render(){var c=CALCS[cur],v=vals[c.id],o=c.calc(v),h="";
+ var big=o.text?o.text:inr(o.val),w=(!o.text&&o.val!=null)?words(o.val):"";
+ h+='<small>'+o.label+'</small><div class="big">'+big+'</div><div class="words">'+(w?"About ₹"+w:"")+'</div>';
+ if(o.split){var t=o.split[0]+o.split[1],a=Math.max(0,o.split[0]/t*100);
+  h+='<div class="bar" role="img" aria-label="Invested versus gains"><i style="width:'+a+'%;background:#bfdbfe"></i><i style="width:'+(100-a)+'%;background:#fbbf24"></i></div><div class="legend"><span><b style="background:#bfdbfe"></b>Invested</span><span><b style="background:#fbbf24"></b>Gains</span></div>'}
+ h+='<dl>'+o.rows.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join("")+'</dl><p class="note">'+o.note+'</p>';
+ var msg="Hi Finvestro, I used the "+c.name+" calculator on your website. Result: "+o.label+" "+big+". I would like to talk to an expert.";
+ h+='<a class="cta" target="_blank" rel="noopener" href="https://wa.me/'+PHONE+'?text='+encodeURIComponent(msg)+'">Talk to an expert on WhatsApp</a>';
+ resEl.innerHTML=h}
+buildTabs();buildInputs();render();
+</script>
+</body>
+</html>
