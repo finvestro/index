@@ -113,22 +113,24 @@ function words(n){n=Math.round(n);if(n>=1e7)return (n/1e7).toFixed(2)+" Crore";i
 var CALCS=[
 {id:"sip",name:"SIP",desc:"Invest a fixed amount every month and see the power of compounding.",
  f:[{id:"a",label:"Monthly investment",min:500,max:200000,step:500,val:10000,pre:"₹"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:30,step:.5,val:12,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:15,suf:"yrs"}],
- calc:function(v){var i=v.r/1200,n=v.y*12,fv=i?v.a*((Math.pow(1+i,n)-1)/i)*(1+i):v.a*n,inv=v.a*n;
-  return {label:"Estimated value",val:fv,split:[inv,fv-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(fv-inv)]],note:"Assumes the SIP is paid at the start of each month at a constant return."}}},
+    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"},
+    {id:"i",label:"Inflation (p.a.)",min:0,max:10,step:.5,val:6,suf:"%"}],
+ calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,n=v.y*12,fv=i?v.a*((Math.pow(1+i,n)-1)/i)*(1+i):v.a*n,inv=v.a*n;
+  return {label:"Estimated value",val:fv,split:[inv,fv-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(fv-inv)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes the SIP is paid at the start of each month. The yearly return is converted to an equivalent monthly rate."}}},
 {id:"lump",name:"Lumpsum",desc:"Invest one amount today and see its value after a few years.",
  f:[{id:"a",label:"Investment amount",min:5000,max:10000000,step:5000,val:500000,pre:"₹"},
-    {id:"r",label:"Expected return (p.a.)",min:1,max:30,step:.5,val:12,suf:"%"},
-    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"}],
+    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"},
+    {id:"i",label:"Inflation (p.a.)",min:0,max:10,step:.5,val:6,suf:"%"}],
  calc:function(v){var fv=v.a*Math.pow(1+v.r/100,v.y);
-  return {label:"Estimated value",val:fv,split:[v.a,fv-v.a],rows:[["Amount invested",inr(v.a)],["Estimated gains",inr(fv-v.a)]],note:"Assumes yearly compounding at a constant return."}}},
+  return {label:"Estimated value",val:fv,split:[v.a,fv-v.a],rows:[["Amount invested",inr(v.a)],["Estimated gains",inr(fv-v.a)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes yearly compounding at a constant return."}}},
 {id:"swp",name:"SWP",desc:"Withdraw a fixed amount every month from your investment and check how long it lasts.",
  f:[{id:"a",label:"Total investment",min:100000,max:50000000,step:100000,val:5000000,pre:"₹"},
     {id:"w",label:"Monthly withdrawal",min:1000,max:500000,step:1000,val:30000,pre:"₹"},
     {id:"r",label:"Expected return (p.a.)",min:1,max:20,step:.5,val:9,suf:"%"},
     {id:"y",label:"Time period",min:1,max:40,step:1,val:15,suf:"yrs"}],
- calc:function(v){var i=v.r/1200,b=v.a,m=v.y*12,ended=0;
+ calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,b=v.a,m=v.y*12,ended=0;
   for(var k=1;k<=m;k++){b=b*(1+i)-v.w;if(b<=0){b=0;ended=k;break}}
   var months=ended||m,lasted=ended?Math.floor(ended/12)+" yrs "+(ended%12)+" months":"Full "+v.y+" years";
   return {label:ended?"Your money lasts about":"Balance after "+v.y+" years",val:b,text:ended?lasted:null,split:null,
@@ -142,7 +144,31 @@ var CALCS=[
     {id:"s",label:"Existing investments and cover",min:0,max:30000000,step:100000,val:1500000,pre:"₹"}],
  calc:function(v){var rr=1.08/1.06-1,pv=v.e*(1-Math.pow(1+rr,-v.y))/rr,need=pv+v.l+v.g-v.s,c=Math.max(0,Math.round(need/100000)*100000);
   return {label:"Suggested life cover",val:c,split:null,rows:[["Family expenses (today’s value)",inr(pv)],["Loans and goals",inr(v.l+v.g)],["Less existing savings and cover","− "+inr(v.s)]],
-   note:"A simple estimate assuming 8% returns and 6% inflation. A proper needs analysis also looks at your age, income and health."}}}
+   note:"A simple estimate assuming 8% returns and 6% inflation. A proper needs analysis also looks at your age, income and health."}}},
+{id:"goal",name:"Goal SIP",desc:"Find the monthly SIP needed to reach a target amount.",
+ f:[{id:"g",label:"Target amount",min:100000,max:100000000,step:100000,val:5000000,pre:"₹"},
+    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"}],
+ calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,n=v.y*12,p=v.g*i/((Math.pow(1+i,n)-1)*(1+i)),inv=p*n;
+  return {label:"Monthly SIP needed",val:p,split:[inv,v.g-inv],rows:[["Target amount",inr(v.g)],["Total invested",inr(inv)],["Estimated gains",inr(v.g-inv)]],note:"Assumes the SIP is paid at the start of each month. The yearly return is converted to an equivalent monthly rate."}}},
+{id:"step",name:"Step-up SIP",desc:"Increase your SIP every year as your income grows.",
+ f:[{id:"a",label:"Starting monthly SIP",min:500,max:200000,step:500,val:10000,pre:"₹"},
+    {id:"s",label:"Yearly increase in SIP",min:0,max:25,step:1,val:10,suf:"%"},
+    {id:"r",label:"Expected return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:40,step:1,val:10,suf:"yrs"}],
+ calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,b=0,inv=0,p=v.a;
+  for(var m=1;m<=v.y*12;m++){b=(b+p)*(1+i);inv+=p;if(m%12===0)p*=1+v.s/100}
+  return {label:"Estimated value",val:b,split:[inv,b-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(b-inv)],["SIP amount in the last year",inr(p/(1+v.s/100))]],note:"The SIP amount goes up once a year. Returns are assumed constant."}}},
+{id:"stp",name:"STP",desc:"Keep money in a debt fund and move a fixed amount to an equity fund every month.",
+ f:[{id:"l",label:"Amount in debt fund",min:100000,max:50000000,step:100000,val:1200000,pre:"₹"},
+    {id:"t",label:"Monthly transfer to equity fund",min:1000,max:1000000,step:1000,val:50000,pre:"₹"},
+    {id:"d",label:"Debt fund return (p.a.)",min:1,max:10,step:.5,val:7,suf:"%"},
+    {id:"e",label:"Equity fund return (p.a.)",min:1,max:15,step:.5,val:10,suf:"%"},
+    {id:"y",label:"Time period",min:1,max:10,step:1,val:2,suf:"yrs"}],
+ calc:function(v){var id=Math.pow(1+v.d/100,1/12)-1,ie=Math.pow(1+v.e/100,1/12)-1,D=v.l,E=0,n=v.y*12,k,x;
+  for(k=1;k<=n;k++){D*=1+id;x=Math.min(v.t,D);D-=x;E=E*(1+ie)+x}
+  var tot=D+E,debt=v.l*Math.pow(1+id,n);
+  return {label:"Total value after "+v.y+" years",val:tot,split:[v.l,tot-v.l],rows:[["Equity fund value",inr(E)],["Debt fund balance",inr(D)],["If kept only in debt fund",inr(debt)]],note:"Transfers stop when the debt fund is empty. Tax, exit load and expenses are not included."}}}
 ];
 var cur=0,vals={};
 CALCS.forEach(function(c){vals[c.id]={};c.f.forEach(function(f){vals[c.id][f.id]=f.val})});
