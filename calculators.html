@@ -87,6 +87,7 @@ dd{font-weight:700;text-align:right}
 <li><a href="index.html">Home</a></li>
 <li><a href="index.html#services">Services</a></li>
 <li><a href="calculators.html" class="on">Calculators</a></li>
+<li><a href="blog.html">Blog</a></li>
 <li><a href="index.html#about">About Us</a></li>
 <li><a href="index.html#contact">Contact</a></li>
 </ul>
@@ -130,6 +131,7 @@ dd{font-weight:700;text-align:right}
 <p><strong>Finvestro – The Investment Hub</strong></p>
 <p>ARN-318624 | Authorized Mutual Fund Distributor</p>
 <p>G7, Ground Floor, Wonder Mall, Alwar, Rajasthan</p>
+<p><a href="https://www.instagram.com/finvestro/" target="_blank" rel="noopener">Instagram</a> | <a href="https://www.facebook.com/finvestro/" target="_blank" rel="noopener">Facebook</a> | <a href="https://www.linkedin.com/company/finvestro/" target="_blank" rel="noopener">LinkedIn</a> | <a href="https://share.google/B8T4gbOSK9O2VNLMh" target="_blank" rel="noopener">Google</a> | <a href="blog.html">Blog</a></p>
 <p><a href="mailto:finvestro.com@gmail.com">finvestro.com@gmail.com</a> | Hitesh: <a href="tel:+919166646162">+91 9166646162</a> | Arun: <a href="tel:+918432846674">+91 8432846674</a></p>
 <p class="s">&copy; 2026 Finvestro. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
 </footer>
@@ -145,14 +147,14 @@ var CALCS=[
     {id:"y",label:"Time period",min:1,max:50,step:1,val:10,suf:"yrs"},
     {id:"i",label:"Inflation (p.a.)",min:0,max:10,step:.5,val:6,suf:"%"}],
  calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,n=v.y*12,fv=i?v.a*((Math.pow(1+i,n)-1)/i)*(1+i):v.a*n,inv=v.a*n;
-  return {label:"Estimated value",val:fv,split:[inv,fv-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(fv-inv)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes the SIP is paid at the start of each month. The yearly return is converted to an equivalent monthly rate."}}},
+  return {label:"Estimated value",val:fv,split:[inv,fv-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(fv-inv)],["Total value",inr(fv)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes the SIP is paid at the start of each month. The yearly return is converted to an equivalent monthly rate."}}},
 {id:"lump",name:"Lumpsum",desc:"Invest one amount today and see its value after a few years.",
  f:[{id:"a",label:"Investment amount",min:5000,max:10000000,step:5000,val:500000,pre:"₹"},
     {id:"r",label:"Expected return (p.a.)",min:1,max:20,step:.5,val:10,suf:"%"},
     {id:"y",label:"Time period",min:1,max:50,step:1,val:10,suf:"yrs"},
     {id:"i",label:"Inflation (p.a.)",min:0,max:10,step:.5,val:6,suf:"%"}],
  calc:function(v){var fv=v.a*Math.pow(1+v.r/100,v.y);
-  return {label:"Estimated value",val:fv,split:[v.a,fv-v.a],rows:[["Amount invested",inr(v.a)],["Estimated gains",inr(fv-v.a)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes yearly compounding at a constant return."}}},
+  return {label:"Estimated value",val:fv,split:[v.a,fv-v.a],rows:[["Amount invested",inr(v.a)],["Estimated gains",inr(fv-v.a)],["Total value",inr(fv)],["Value in today’s money",inr(fv/Math.pow(1+v.i/100,v.y))]],note:"Assumes yearly compounding at a constant return."}}},
 {id:"swp",name:"SWP",desc:"Withdraw a fixed amount every month from your investment and check how long it lasts.",
  f:[{id:"a",label:"Total investment",min:100000,max:50000000,step:100000,val:5000000,pre:"₹"},
     {id:"w",label:"Monthly withdrawal",min:1000,max:500000,step:1000,val:30000,pre:"₹"},
@@ -186,7 +188,7 @@ var CALCS=[
     {id:"y",label:"Time period",min:1,max:50,step:1,val:10,suf:"yrs"}],
  calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,b=0,inv=0,p=v.a;
   for(var m=1;m<=v.y*12;m++){b=(b+p)*(1+i);inv+=p;if(m%12===0)p*=1+v.s/100}
-  return {label:"Estimated value",val:b,split:[inv,b-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(b-inv)],["SIP amount in the last year",inr(p/(1+v.s/100))]],note:"The SIP amount goes up once a year. Returns are assumed constant."}}},
+  return {label:"Estimated value",val:b,split:[inv,b-inv],rows:[["Total invested",inr(inv)],["Estimated gains",inr(b-inv)],["Total value",inr(b)],["SIP amount in the last year",inr(p/(1+v.s/100))]],note:"The SIP amount goes up once a year. Returns are assumed constant."}}},
 {id:"stp",name:"STP",desc:"Keep money in a debt fund and move a fixed amount to an equity fund every month.",
  f:[{id:"l",label:"Amount in debt fund",min:100000,max:50000000,step:100000,val:1200000,pre:"₹"},
     {id:"t",label:"Monthly transfer to equity fund",min:1000,max:1000000,step:1000,val:50000,pre:"₹"},
@@ -196,9 +198,18 @@ var CALCS=[
  calc:function(v){var id=Math.pow(1+v.d/100,1/12)-1,ie=Math.pow(1+v.e/100,1/12)-1,D=v.l,E=0,n=v.y*12,k,x;
   for(k=1;k<=n;k++){D*=1+id;x=Math.min(v.t,D);D-=x;E=E*(1+ie)+x}
   var tot=D+E,debt=v.l*Math.pow(1+id,n);
-  return {label:"Total value after "+v.y+" years",val:tot,split:[v.l,tot-v.l],rows:[["Equity fund value",inr(E)],["Debt fund balance",inr(D)],["If kept only in debt fund",inr(debt)]],note:"Transfers stop when the debt fund is empty. Tax, exit load and expenses are not included."}}}
+  return {label:"Total value after "+v.y+" years",val:tot,split:[v.l,tot-v.l],rows:[["Equity fund value",inr(E)],["Debt fund balance",inr(D)],["If kept only in debt fund",inr(debt)]],note:"Transfers stop when the debt fund is empty. Tax, exit load and expenses are not included."}}},
+{id:"combo",name:"SIP + Hold",desc:"Invest a monthly SIP for some years, then keep the total amount invested for a few more years.",
+ f:[{id:"a",label:"Monthly SIP",min:500,max:500000,step:500,val:10000,pre:"₹"},
+    {id:"y",label:"SIP period",min:1,max:50,step:1,val:10,suf:"yrs"},
+    {id:"r",label:"Expected return during SIP (p.a.)",min:1,max:20,step:.5,val:10,suf:"%"},
+    {id:"h",label:"Extra holding period (no new SIP)",min:1,max:50,step:1,val:5,suf:"yrs"},
+    {id:"q",label:"Expected return during holding (p.a.)",min:1,max:20,step:.5,val:10,suf:"%"},
+    {id:"i",label:"Inflation (p.a.)",min:0,max:10,step:.5,val:6,suf:"%"}],
+ calc:function(v){var i=Math.pow(1+v.r/100,1/12)-1,n=v.y*12,f1=i?v.a*((Math.pow(1+i,n)-1)/i)*(1+i):v.a*n,inv=v.a*n,f2=f1*Math.pow(1+v.q/100,v.h),t=v.y+v.h;
+  return {label:"Final value after "+t+" years",val:f2,split:[inv,f2-inv],rows:[["Total invested (SIP)",inr(inv)],["Value at the end of SIP",inr(f1)],["Growth during holding period",inr(f2-f1)],["Total value",inr(f2)],["Total gains",inr(f2-inv)],["Value in today’s money",inr(f2/Math.pow(1+v.i/100,t))]],note:"Step 1: monthly SIP for the SIP period. Step 2: the total is kept invested without new SIPs. Returns are assumed constant."}}}
 ];
-var ORDER=["sip","lump","swp","stp","goal","step","term"];
+var ORDER=["sip","lump","swp","stp","goal","step","combo","term"];
 CALCS.sort(function(a,b){return ORDER.indexOf(a.id)-ORDER.indexOf(b.id)});
 var cur=0,vals={};
 (function(){var h=location.hash.slice(1);CALCS.forEach(function(c,k){if(c.id===h)cur=k})})();
@@ -219,6 +230,7 @@ swp:["SWP Calculator – Plan Your Monthly Withdrawals","Free online SWP calcula
 stp:["STP Calculator – Move Money from Debt to Equity Fund","Free online STP calculator. See what happens when you transfer a fixed amount every month from a debt fund to an equity fund.","STP Calculator – Systematic Transfer Plan Calculator | Finvestro"],
 goal:["Goal SIP Calculator – Find the Monthly SIP You Need","Free goal-based SIP calculator. Enter your target amount and time period to find the monthly SIP required to reach it.","Goal SIP Calculator – Monthly SIP Needed for Your Target | Finvestro"],
 step:["Step-up SIP Calculator – Increase Your SIP Every Year","Free step-up SIP calculator. See how raising your SIP amount every year can grow your investment.","Step-up SIP Calculator – Free Online Calculator | Finvestro"],
+combo:["SIP + Hold Calculator – Keep Your SIP Corpus Invested for More Years","Free SIP + Hold calculator by Finvestro. Invest a monthly SIP for some years, then keep the total amount invested for a few more years and see the final value.","SIP + Hold Calculator – SIP then Lumpsum Calculator | Finvestro"],
 term:["Term Insurance Cover Calculator – How Much Cover Do You Need?","Free term cover calculator. Get a simple estimate of the life cover your family may need.","Term Insurance Cover Calculator – Free Online Calculator | Finvestro"]};
 function setHead(c){var h=HEAD[c.id];if(!h)return;document.getElementById("pgH").textContent=h[0];document.getElementById("pgP").textContent=h[1];document.title=h[2]}
 function render(){var c=CALCS[cur],v=vals[c.id],o=c.calc(v),h="";setHead(c);
