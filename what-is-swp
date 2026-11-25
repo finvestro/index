@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is SWP? Systematic Withdrawal Plan Explained Simply | Finvestro</title>
+<meta name="description" content="Learn what a SWP (Systematic Withdrawal Plan) is, how it works, a simple example and what to keep in mind before you start. By Finvestro.">
+<link rel="canonical" href="https://finvestro.com/what-is-swp.html"><link rel="alternate" hreflang="en" href="https://finvestro.com/what-is-swp.html"><link rel="alternate" hreflang="hi" href="https://finvestro.com/swp-kya-hai.html">
+<link rel="icon" href="Finvestro_Logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="What Is SWP? Systematic Withdrawal Plan Explained Simply | Finvestro">
+<meta property="og:description" content="Learn what a SWP (Systematic Withdrawal Plan) is, how it works, a simple example and what to keep in mind before you start. By Finvestro.">
+<meta property="og:url" content="https://finvestro.com/what-is-swp.html">
+<meta property="og:image" content="https://finvestro.com/Finvestro_Logo.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;overflow-x:hidden;background:#f8f9fa}
+.header{background:#fff;color:#1e3a8a;padding:.9rem 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.10);border-bottom:1px solid #eef2f7}
+.nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo-img{width:190px;height:auto;display:block}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{color:#1e3a8a;text-decoration:none;font-weight:500;transition:opacity .3s}
+.nav-links a:hover{opacity:.8}
+.nav-links a.on{border-bottom:2px solid #3b82f6;padding-bottom:2px}
+.menu-toggle{display:none;background:none;border:none;color:#1e3a8a;font-size:1.5rem;cursor:pointer}
+.hero{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;padding:60px 2rem 56px;text-align:center;margin-top:68px}
+.hero h1{font-size:2.5rem;margin-bottom:.6rem}
+.hero p{font-size:1.15rem;opacity:.95;max-width:640px;margin:0 auto}
+.wrap{max-width:1100px;margin:0 auto;padding:40px 1.2rem 60px}
+.tabs{display:flex;gap:10px;overflow-x:auto;margin-bottom:22px;padding-bottom:4px;justify-content:center;flex-wrap:wrap}
+.tabs button{border:2px solid #dbe4f0;background:#fff;color:#1e3a8a;font:inherit;font-weight:700;padding:11px 24px;border-radius:50px;cursor:pointer;transition:.25s}
+.tabs button:hover{border-color:#3b82f6}
+.tabs button[aria-selected="true"]{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);border-color:transparent;color:#fff}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}
+.inputs{background:#fff;border-radius:15px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.desc{color:#666;margin-bottom:22px}
+.f{margin-bottom:22px}
+.f:last-child{margin-bottom:0}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}
+.row label{font-weight:700;color:#1e3a8a;font-size:.95rem}
+.box{display:flex;align-items:center;border:2px solid #e0e0e0;border-radius:8px;background:#f8f9fa;padding:0 10px;justify-content:flex-end;min-width:160px}
+.box:focus-within{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+.box span{color:#666;font-size:.9rem}
+.box input::-webkit-outer-spin-button,.box input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}.box input{width:145px;-moz-appearance:textfield;appearance:textfield;border:0;background:transparent;font:inherit;font-weight:700;color:#1e3a8a;text-align:right;padding:7px 4px;outline:none}
+input[type=range]{width:100%;accent-color:#3b82f6}
+.res{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;border-radius:15px;padding:30px;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(30,58,138,.3)}
+.res small{opacity:.9;font-size:1rem}
+.big{font-size:clamp(2rem,6vw,2.8rem);font-weight:700;line-height:1.2;margin:4px 0;overflow-wrap:anywhere}
+.words{opacity:.9;margin-bottom:18px;min-height:1.6em}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;background:rgba(255,255,255,.2);margin-bottom:8px}
+.bar i{display:block;height:100%}
+.legend{display:flex;gap:16px;font-size:.85rem;opacity:.95;margin-bottom:14px}
+.legend b{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+dl{margin-bottom:16px}
+dl div{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;background:rgba(255,255,255,.1);border-radius:10px;margin-bottom:8px}
+dd{font-weight:700;text-align:right}
+.note{font-size:.85rem;opacity:.9;margin-bottom:18px}
+.cta{margin-top:auto;display:block;text-align:center;background:#fff;color:#1e3a8a;text-decoration:none;font-weight:700;padding:14px 20px;border-radius:50px;transition:transform .3s,box-shadow .3s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
+.disc{margin-top:28px;font-size:.85rem;color:#666;background:#fff;border-left:4px solid #3b82f6;border-radius:8px;padding:14px 18px}
+.info{margin-top:36px;background:#fff;border-radius:15px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,.08)}.info h2{color:#1e3a8a;font-size:1.6rem;margin-bottom:.7rem}.info h3{color:#1e3a8a;font-size:1.1rem;margin:1.1rem 0 .3rem}.info p{margin-bottom:.8rem;color:#444}.info a{color:#1e3a8a;font-weight:600}
+.footer{background:#1e3a8a;color:#fff;text-align:center;padding:2.5rem 2rem}
+.footer p{margin-bottom:.4rem;font-size:.95rem}
+.footer a{color:#fff;text-decoration:none}
+.footer a:hover{text-decoration:underline}
+.footer .s{opacity:.85;font-size:.85rem;margin-top:1rem}
+@media (max-width:768px){
+.logo-img{width:155px}
+.menu-toggle{display:block}
+.nav-links{position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:1rem;display:none;gap:1rem;box-shadow:0 8px 12px rgba(0,0,0,.08)}
+.nav-links.active{display:flex}
+.hero h1{font-size:1.9rem}
+.hero p{font-size:1rem}
+.grid{grid-template-columns:1fr}
+.inputs,.res{padding:22px}
+}
+.soc{display:flex;flex-wrap:wrap;gap:12px 18px;justify-content:center;margin:12px 0}.soc a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:.95rem}.soc a:hover{text-decoration:underline}.ic{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:700 14px Arial,sans-serif;color:#fff}.ic.ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}.ic.fb{background:#1877f2}.ic.li{background:#0a66c2}.ic.go{background:#fff;color:#4285f4}.ic.st{background:#fbbc05;color:#1d1503}.ic.wa{background:#25d366}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What Is SWP? Systematic Withdrawal Plan Explained Simply", "inLanguage": "en", "datePublished": "2026-11-25", "author": {"@type": "Organization", "name": "Finvestro – The Investment Hub"}, "publisher": {"@type": "Organization", "name": "Finvestro – The Investment Hub", "url": "https://finvestro.com/"}, "mainEntityOfPage": "https://finvestro.com/what-is-swp.html"}</script>
+</head>
+<body>
+<header class="header">
+<nav class="nav-container">
+<a href="index.html"><img src="Finvestro_Logo.png" alt="Finvestro Logo" class="logo-img"></a>
+<button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="calculators.html">Calculators</a></li>
+<li><a href="blog.html" class="on">Blog</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<h1>What Is SWP? Systematic Withdrawal Plan Explained Simply</h1>
+<p>A plain-language guide from Finvestro.</p>
+</section>
+
+<main class="wrap"><article class="info" style="margin-top:0"><p>A SWP, or Systematic Withdrawal Plan, lets you take out a fixed amount from your mutual fund investment at regular intervals, such as every month. The rest of your money stays invested. People often use it to create a regular cash flow, for example after retirement.</p>
+<h2>How does a SWP work?</h2>
+<p>You choose the amount, the date and the scheme. On each date, the fund sells enough units to pay your amount and sends it to your bank account. The units that remain keep moving up or down with the market.</p>
+<h2>A simple example</h2>
+<p>Suppose you have ₹50,00,000 invested and withdraw ₹30,000 every month for 15 years, and the investment grows at an assumed 9% a year. You would withdraw ₹54,00,000 in total, and about ₹72 lakh would still be left at the end. This is only an illustration. Real returns can be higher or lower, and the money can run out sooner if returns are low or withdrawals are high. Try your own numbers in our <a href="calculators.html#swp">SWP calculator</a>.</p>
+<h2>Who may find it useful</h2>
+<p>• People who want a regular income from their savings, such as retirees.<br>• Anyone who wants a regular payout without selling the whole investment at once.</p>
+<h2>Things to keep in mind</h2>
+<p>• Mutual funds are subject to market risk, and the value of your investment can go down as well as up.<br>• If you withdraw more than the investment earns, the balance will keep falling.<br>• Each withdrawal is a redemption, so tax and exit load may apply. Tax depends on the type of scheme and how long you held the units, so please check with a tax professional.<br>• Review the withdrawal amount once a year.</p>
+<h2>SWP and STP: what is the difference?</h2>
+<p>An SWP pays money to your bank account. An STP moves money from one scheme to another. You can compare both in our <a href="calculators.html#stp">STP calculator</a>.</p>
+<h2>How to start</h2>
+<p>Choose the scheme, the monthly amount and the date with the help of your distributor. If you would like help, <a href="index.html#contact">contact us</a> or <a href="https://wa.me/919166646162?text=Hi%20Finvestro%2C%20I%20read%20your%20blog%20and%20would%20like%20to%20talk." target="_blank" rel="noopener">message us on WhatsApp</a>.</p>
+<p style="font-size:.85rem;color:#666">Mutual fund investments are subject to market risks. Read all scheme related documents carefully. This article is for general information and is not investment advice.</p>
+<p><a href="swp-kya-hai.html">इसे हिंदी में पढ़ें →</a> | <a href="blog.html">← All articles</a></p></article></main>
+
+<footer class="footer">
+<p><strong>Finvestro – The Investment Hub</strong></p>
+<p>ARN-318624 | Authorized Mutual Fund Distributor</p>
+<p>G7, Ground Floor, Wonder Mall, Alwar, Rajasthan</p>
+<div class="soc"><a href="https://www.instagram.com/finvestro/" target="_blank" rel="noopener"><span class="ic ig"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></span>Instagram</a><a href="https://www.facebook.com/finvestro/" target="_blank" rel="noopener"><span class="ic fb">f</span>Facebook</a><a href="https://www.linkedin.com/company/finvestro/" target="_blank" rel="noopener"><span class="ic li">in</span>LinkedIn</a><a href="https://maps.app.goo.gl/gKFWYEULZvWdxrbv7" target="_blank" rel="noopener"><span class="ic go">G</span>Google</a><a href="https://g.page/r/CfoLPGCZDp0lEBM/review" target="_blank" rel="noopener"><span class="ic st">★</span>Review us on Google</a><a href="https://wa.me/919166646162" target="_blank" rel="noopener"><span class="ic wa"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.8-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z" fill="#fff"/></svg></span>WhatsApp</a></div>
+<p><a href="blog.html">Blog</a></p>
+<p><a href="mailto:finvestro.com@gmail.com">finvestro.com@gmail.com</a> | Arun: <a href="tel:+918432846674">+91 8432846674</a> | Hitesh: <a href="tel:+919166646162">+91 9166646162</a></p>
+<p class="s">&copy; 2026 Finvestro. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
