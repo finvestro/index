@@ -75,6 +75,7 @@ dd{font-weight:700;text-align:right}
 .grid{grid-template-columns:1fr}
 .inputs,.res{padding:22px}
 }
+.soc{display:flex;flex-wrap:wrap;gap:12px 18px;justify-content:center;margin:12px 0}.soc a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:.95rem}.soc a:hover{text-decoration:underline}.ic{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:700 14px Arial,sans-serif;color:#fff}.ic.ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}.ic.fb{background:#1877f2}.ic.li{background:#0a66c2}.ic.go{background:#fff;color:#4285f4}.ic.st{background:#fbbc05;color:#1d1503}.ic.wa{background:#25d366}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What Is a SIP? A Simple Guide for Beginners", "inLanguage": "en", "datePublished": "2026-11-24", "author": {"@type": "Organization", "name": "Finvestro – The Investment Hub"}, "publisher": {"@type": "Organization", "name": "Finvestro – The Investment Hub", "url": "https://finvestro.com/"}, "mainEntityOfPage": "https://finvestro.com/what-is-sip.html"}</script>
 </head>
@@ -117,8 +118,9 @@ dd{font-weight:700;text-align:right}
 <p><strong>Finvestro – The Investment Hub</strong></p>
 <p>ARN-318624 | Authorized Mutual Fund Distributor</p>
 <p>G7, Ground Floor, Wonder Mall, Alwar, Rajasthan</p>
-<p><a href="https://www.instagram.com/finvestro/" target="_blank" rel="noopener">Instagram</a> | <a href="https://www.facebook.com/finvestro/" target="_blank" rel="noopener">Facebook</a> | <a href="https://www.linkedin.com/company/finvestro/" target="_blank" rel="noopener">LinkedIn</a> | <a href="https://share.google/B8T4gbOSK9O2VNLMh" target="_blank" rel="noopener">Google</a> | <a href="blog.html">Blog</a></p>
-<p><a href="mailto:finvestro.com@gmail.com">finvestro.com@gmail.com</a> | Hitesh: <a href="tel:+919166646162">+91 9166646162</a> | Arun: <a href="tel:+918432846674">+91 8432846674</a></p>
+<div class="soc"><a href="https://www.instagram.com/finvestro/" target="_blank" rel="noopener"><span class="ic ig"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></span>Instagram</a><a href="https://www.facebook.com/finvestro/" target="_blank" rel="noopener"><span class="ic fb">f</span>Facebook</a><a href="https://www.linkedin.com/company/finvestro/" target="_blank" rel="noopener"><span class="ic li">in</span>LinkedIn</a><a href="https://maps.app.goo.gl/gKFWYEULZvWdxrbv7" target="_blank" rel="noopener"><span class="ic go">G</span>Google</a><a href="https://g.page/r/CfoLPGCZDp0lEBM/review" target="_blank" rel="noopener"><span class="ic st">★</span>Review us on Google</a><a href="https://wa.me/919166646162" target="_blank" rel="noopener"><span class="ic wa"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.8-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z" fill="#fff"/></svg></span>WhatsApp</a></div>
+<p><a href="blog.html">Blog</a></p>
+<p><a href="mailto:finvestro.com@gmail.com">finvestro.com@gmail.com</a> | Arun: <a href="tel:+918432846674">+91 8432846674</a> | Hitesh: <a href="tel:+919166646162">+91 9166646162</a></p>
 <p class="s">&copy; 2026 Finvestro. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
 </footer>
 
