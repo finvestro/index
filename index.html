@@ -110,6 +110,7 @@ section h2{text-align:center;font-size:2.3rem;color:#1e3a8a;margin-bottom:1rem}
 .wa-float{padding:12px 16px}
 }
 .soc{display:flex;flex-wrap:wrap;gap:12px 18px;justify-content:center;margin:12px 0}.soc a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:.95rem}.soc a:hover{text-decoration:underline}.ic{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:700 14px Arial,sans-serif;color:#fff}.ic.ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}.ic.fb{background:#1877f2}.ic.li{background:#0a66c2}.ic.go{background:#fff;color:#4285f4}.ic.st{background:#fbbc05;color:#1d1503}.ic.wa{background:#25d366}
+.reviews{padding:70px 2rem;background:#f8f9fa}.rv-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem}.rv{background:#fff;border-radius:15px;padding:1.6rem;box-shadow:0 5px 15px rgba(0,0,0,.1)}.stars{color:#f5a623;letter-spacing:2px;margin-bottom:.6rem}.rv blockquote{color:#444;margin-bottom:.9rem}.rv figcaption{color:#1e3a8a;font-weight:700;font-size:.9rem}.rv-links{text-align:center;margin-top:1.6rem}.rv-links a{color:#1e3a8a;font-weight:700}.rv-note{text-align:center;font-size:.8rem;color:#666;margin-top:.8rem}
 </style>
 </head>
 <body>
@@ -215,7 +216,17 @@ section h2{text-align:center;font-size:2.3rem;color:#1e3a8a;margin-bottom:1rem}
 </div>
 </section>
 
-<!-- REVIEWS_SECTION_PLACEHOLDER: add client Google reviews here -->
+<section id="reviews" class="reviews">
+<h2>What Our Clients Say</h2>
+<p class="subtitle">Reviews from our Google Business Profile</p>
+<div class="rv-grid">
+<figure class="rv"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>Great experience with Finvestro. Thanks for guiding me.</blockquote><figcaption>Neelam P. · Google review, Aug 2025</figcaption></figure>
+<figure class="rv"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>Best investment planner and adviser for mutual fund SIP.</blockquote><figcaption>Himanshu S. · Google review, Sept 2025</figcaption></figure>
+<figure class="rv"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>I have been investing with Finvestro for a while now, and I am extremely happy with the results. The returns have been consistently good, and the team is very transparent in explaining every detail. Their guidance has helped me make the right investment decisions with confidence. I truly trust Finvestro and highly recommend their services.</blockquote><figcaption>Priyanshi P. · Google review, Aug 2025</figcaption></figure>
+</div>
+<p class="rv-links"><a href="https://maps.app.goo.gl/gKFWYEULZvWdxrbv7" target="_blank" rel="noopener">Read all reviews on Google</a> | <a href="https://g.page/r/CfoLPGCZDp0lEBM/review" target="_blank" rel="noopener">Write a review</a></p>
+<p class="rv-note">Reviews are personal opinions of clients, shown as posted on Google. They are not a guarantee of future returns.</p>
+</section>
 <!-- TEAM_SECTION_PLACEHOLDER: add Hitesh Sharma and Arun Sharma photos and profiles here -->
 <section id="review" class="calc-band">
 <h2>Free Portfolio Review</h2>
@@ -241,7 +252,8 @@ section h2{text-align:center;font-size:2.3rem;color:#1e3a8a;margin-bottom:1rem}
 <form id="contactForm" action="https://formsubmit.co/finvestro.com@gmail.com" method="POST">
 <input type="hidden" name="_subject" value="New Finvestro Website Enquiry">
 <input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 <input type="hidden" name="_next" value="https://finvestro.com/?sent=1">
 <div class="form-group"><label for="name">Name *</label><input type="text" id="name" name="name" autocomplete="name" required></div>
 <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email"></div>
@@ -259,7 +271,7 @@ section h2{text-align:center;font-size:2.3rem;color:#1e3a8a;margin-bottom:1rem}
 <div>
 <p><strong>Mutual fund investments are subject to market risks. Read all scheme related documents carefully.</strong> Past performance may or may not be sustained in future. Returns are not guaranteed.</p>
 <p>Finvestro is an AMFI Registered Mutual Fund Distributor (ARN-318624) and is not a SEBI Registered Investment Adviser. Information, calculators and illustrations on this website are for general information only. They are not investment advice or a promise of returns.</p>
-<p>Insurance is the subject matter of solicitation. Health insurance is offered in association with Aditya Birla Health Insurance Co. Limited, and policy terms and conditions apply. Real estate information is general in nature; please verify RERA registration and legal documents before any purchase.</p>
+<p>Insurance is the subject matter of solicitation. Health insurance is offered in association with Aditya Birla Health Insurance Co. Limited. Life and general insurance products are offered through our insurer partners. Policy terms and conditions apply. Real estate information is general in nature; please verify RERA registration and legal documents before any purchase.</p>
 </div>
 </section>
 
